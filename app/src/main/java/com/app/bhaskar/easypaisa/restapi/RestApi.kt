@@ -127,7 +127,7 @@ interface RestApi {
     @POST(Constants.ApiMethod.API_MICRO_ATM_UPDATE)
     fun doMicroAtmUpdate(@Body request: RequestBody): Flowable<MicroAtmUpdateResponse>
 
-    @POST(Constants.ApiMethod.API_FING_PAY_AEPS)
+    @POST(Constants.ApiMethod.API_AEPS_TXN)
     fun doApiFingPayAepsMini(@Body request: RequestBody): Flowable<FingpayMiniStatementResponse>
 
     @POST(Constants.ApiMethod.API_TXN_HISTORY)

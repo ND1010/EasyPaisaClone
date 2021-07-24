@@ -10,12 +10,12 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivBoardImage"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        app:civ_border_color="@color/colorGray"
         app:civ_border_overlay="true"
         app:civ_border_width="1dp"
-        app:civ_border_color="@color/colorGray"
-        app:civ_circle_background_color="@color/colorLightGray"
-        android:layout_width="46dp"
-        android:layout_height="46dp" />
+        app:civ_circle_background_color="@color/colorLightGray" />
 
     <TextView
         android:id="@+id/tvSelectBoard"

@@ -88,7 +88,7 @@ class CaptureFingerPresenterImpl(val view: CaptureFingerPresenter.CaptureFingerV
 
     override fun apiCallforAepsFinpayTxnMiniSt() {
         if (Utils.isNetworkConnected(view.getViewActivity())) {
-            view.showProgress("Processing AePS transaction,Please wait...")
+            view.showProgress("Processing AePS Mini statement...")
             val request = view.doRetriveModel().getFingPayAepsRequest()
             repository.apiFingPayICICITransactionMiniStatement(request, {
                 view.hideProgress()

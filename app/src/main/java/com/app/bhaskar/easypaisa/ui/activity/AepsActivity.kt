@@ -408,17 +408,13 @@ class AepsActivity : BaseActivity(), AepsPresenter.AepsView {
             }
 
             if (aepsServiceFor == Constants.AvailableService.SERVICE_ICICI_AEPS
-                || aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS
-            ) {
-                if (transactionFor == getString(R.string.ser_aadhar_pay) && selectedAadharBank == null) {
-                    showToast("Please select bank")
-                    return false
-                } else if (aepsServiceFor == Constants.AvailableService.SERVICE_ICICI_AEPS &&
-                    transactionFor != getString(R.string.ser_aadhar_pay) && selectedBank == null
-                ) {
+                || aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS) {
+                if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS &&
+                    transactionFor == getString(R.string.ser_aadhar_pay) && selectedAadharBank == null) {
                     showToast("Please select bank")
                     return false
                 } else if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS
+                    && transactionFor != getString(R.string.ser_aadhar_pay)
                     && selectedYesBank == null
                 ) {
                     showToast("Please select bank")

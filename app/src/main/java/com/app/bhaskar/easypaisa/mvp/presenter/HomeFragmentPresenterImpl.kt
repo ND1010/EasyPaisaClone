@@ -108,7 +108,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
 
         //Easypay  ICICI
         val serAepsIF = HomeData.Servi()
-        serAepsIF.serviceIcon = R.drawable.ic_biometeric
+        serAepsIF.serviceIcon = R.drawable.ic_aeps_aadhaarpay
         serAepsIF.serviceName = view.getViewActivity().getString(R.string.yes_aeps_icici_ep)
         serAepsIF.serviceId = Constants.AvailableService.SERVICE_AEPS_ICICI_EP
 
@@ -119,7 +119,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
 
         val serAepsI = HomeData.Servi()
         serAepsI.serviceIcon = R.drawable.ic_biometeric
-        serAepsI.serviceName = view.getViewActivity().getString(R.string.icici_aeps)
+        serAepsI.serviceName = view.getViewActivity().getString(R.string.nsdl_aeps)
         serAepsI.serviceId = Constants.AvailableService.SERVICE_ICICI_AEPS
 
         val serAepsM = HomeData.Servi()
@@ -146,6 +146,24 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
         serAepsDeposite.serviceIcon = R.drawable.ic_cash_deposite
         serAepsDeposite.serviceName = view.getViewActivity().getString(R.string.cash_deposit)
         serAepsDeposite.serviceId = Constants.AvailableService.SERVICE_DEPOSITE
+
+
+        //Fixme 22/7/21 removed Fingpay ICICI
+        homeData1.servi.add(serAepsI)//FingPay AePS
+        homeData1.servi.add(serAepsY)//EasyPay
+//        homeData1.servi.add(serAepsF)//Fino Aeps
+
+        homeData1.servi.add(serAadharPay)//Aadharpay Aeps
+        homeData1.servi.add(serMiniStatement)//Ministatement Aeps
+        homeData1.servi.add(serAepsDeposite)//Deposite Aeps
+
+        homeData1.servi.add(serAepsM)//ICICI Micro ATM
+        homeData1.servi.add(serAepsMTfr)//DMT
+
+        //Bill Pay and Recharge
+
+        val homeData2 = HomeData()
+        homeData2.categoryName = "Bill Pay and Recharge"
 
         val serAepsEl = HomeData.Servi()
         serAepsEl.serviceIcon = R.drawable.ic_electricity_txn
@@ -322,7 +340,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         })
                     return
                 }
-                intent.putExtra("selectedService", Constants.AvailableService.SERVICE_ICICI_AEPS)
+                intent.putExtra("selectedService", Constants.AvailableService.SERVICE_EASYPAY_AEPS)
                 intent.putExtra(
                     "transactionFor",
                     view.getViewActivity().getString(R.string.ser_aadhar_pay)
@@ -344,7 +362,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         })
                     return
                 }
-                intent.putExtra("selectedService", Constants.AvailableService.SERVICE_ICICI_AEPS)
+                intent.putExtra("selectedService", Constants.AvailableService.SERVICE_EASYPAY_AEPS)
                 intent.putExtra(
                     "transactionFor",
                     view.getViewActivity().getString(R.string.ser_mini_statement)

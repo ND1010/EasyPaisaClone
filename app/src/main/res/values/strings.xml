@@ -30,8 +30,9 @@
     <string name="wallet">Wallet</string>
     <string name="account">Account</string>
     <string name="transactions">Transactions</string>
-    <string name="yes_aeps">Yes AePS</string>
+    <string name="yes_aeps">AePS</string>
     <string name="icici_aeps">ICICI AePS</string>
+    <string name="nsdl_aeps">NSDL AePS</string>
     <string name="fino_aeps">Fino AePS</string>
     <string name="micro_atm">Micro Atm</string>
     <string name="electricity">Electricity</string>

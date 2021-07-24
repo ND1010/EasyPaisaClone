@@ -74,15 +74,9 @@ class MiniStatementActivity : BaseActivity() {
         }
 
         if (fingpayMiniStatementResponse != null) {
-            tvMainWalletBalance.text = if (fingpayMiniStatementResponse?.amount != null && fingpayMiniStatementResponse!!.amount.isNotEmpty()) Utils.formatAmount(fingpayMiniStatementResponse!!.amount.toDouble()) else "NA"
+            tvMainWalletBalance.text = if (fingpayMiniStatementResponse?.balance != null && fingpayMiniStatementResponse!!.amount.isNotEmpty()) Utils.formatAmount(fingpayMiniStatementResponse!!.balance.toDouble()) else "NA"
             tvAgentNameValue.text = fingpayMiniStatementResponse!!.rrn
-
             tvAgentAadharNoValue.text = fingpayMiniStatementResponse!!.bank
-                /*if (miniStatementResponse?.dATA?.txnDate != null && miniStatementResponse?.dATA?.txnDate!!.isNotEmpty() && miniStatementResponse?.dATA?.txnDate!!.contains("IST"))
-                    Utils.convertDateTime(miniStatementResponse?.dATA?.txnDate!!)
-                else if (miniStatementResponse?.dATA?.txnDate != null && miniStatementResponse?.dATA?.txnDate!!.isNotEmpty())
-                    Utils.formateTxnDateString("dd/MM/yyyy hh:mm:ss", "EEE, dd MMM yyyy, hh:mm aa", miniStatementResponse?.dATA?.txnDate!!)
-                else "NA"*/
 
             layoutManager = LinearLayoutManager(getViewActivity(), RecyclerView.VERTICAL, false)
             miniBankStatementAdapter = MiniStatementAdapter(getViewActivity(), arrayListMiniStatement) {

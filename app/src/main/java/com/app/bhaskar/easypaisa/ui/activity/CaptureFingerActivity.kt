@@ -458,7 +458,11 @@ class CaptureFingerActivity : BaseActivity(), CaptureFingerPresenter.CaptureFing
                 }
             request.bankId = aepsRequest?.bank!!.iinno
             request.device = deviceSelectedServer
-            presenter.apiCallforYesAeps()
+            if (request.transactionType == "MS") {
+                presenter.apiCallforAepsFinpayTxnMiniSt()
+            } else {
+                presenter.apiCallforYesAeps()
+            }
         }
     }
 
