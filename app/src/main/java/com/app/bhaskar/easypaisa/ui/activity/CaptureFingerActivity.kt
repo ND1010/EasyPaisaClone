@@ -422,8 +422,10 @@ class CaptureFingerActivity : BaseActivity(), CaptureFingerPresenter.CaptureFing
 
             if (request.transactionType == "MS") {
                 presenter.apiCallforAepsFinpayTxnMiniSt()
-            } else {
+            } else if(request.transactionType == "CD"){
                 presenter.apiCallforAepsFinpayTxn()
+            }else{
+                presenter.apiCallforAepsIciciEasyPayTxn()
             }
         } else if (aepsRequest?.aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS) {
             val request = doRetriveModel().getFingPayAepsRequest()

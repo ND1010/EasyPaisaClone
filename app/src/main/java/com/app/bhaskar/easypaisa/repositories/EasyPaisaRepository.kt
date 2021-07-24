@@ -49,6 +49,12 @@ interface EasyPaisaRepository {
         failerHandler: (Throwable?) -> Unit
     )
 
+    fun apiFingPayICICIEasyPayTransaction(
+        request: FingPayICICIAepsTransactionRequest,
+        successHandler: (FingPayAepsTxnResponse) -> Unit,
+        failerHandler: (Throwable?) -> Unit
+    )
+
     fun apiRechargePlan(
         request: MobileRechargePlanRequest,
         successHandler: (MobileRechargePlanResponse) -> Unit,

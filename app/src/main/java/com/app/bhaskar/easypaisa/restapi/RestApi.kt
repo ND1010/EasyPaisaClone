@@ -46,7 +46,7 @@ interface RestApi {
         userSelfie: MultipartBody.Part
     ): Flowable<AgentKycResponse>
 
-    @POST(Constants.ApiMethod.API_FING_PAY_AEPS)
+    @POST(Constants.ApiMethod.API_EASYPAY_ICICI_BANK_AEPS)
     fun doApiFingPayAepsTransactions(@Body request: RequestBody): Flowable<FingPayAepsTxnResponse>
 
     @POST(Constants.ApiMethod.API_MOBILE_PROVIDER)
@@ -127,7 +127,7 @@ interface RestApi {
     @POST(Constants.ApiMethod.API_MICRO_ATM_UPDATE)
     fun doMicroAtmUpdate(@Body request: RequestBody): Flowable<MicroAtmUpdateResponse>
 
-    @POST(Constants.ApiMethod.API_AEPS_TXN)
+    @POST(Constants.ApiMethod.API_YES_BANK_AEPS)
     fun doApiFingPayAepsMini(@Body request: RequestBody): Flowable<FingpayMiniStatementResponse>
 
     @POST(Constants.ApiMethod.API_TXN_HISTORY)

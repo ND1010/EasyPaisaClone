@@ -14,7 +14,7 @@ data class FingpayMiniStatementResponse(
     var message: String = "",
     @SerializedName("rrn")
     var rrn: String = "",
-    @SerializedName("statement")
+    @SerializedName("data")
     var statement: ArrayList<Statement> = ArrayList(),
     @SerializedName("status")
     var status: String = "",

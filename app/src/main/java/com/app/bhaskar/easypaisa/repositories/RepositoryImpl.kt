@@ -254,6 +254,30 @@ class RepositoryImpl(val localSource: ResultDataDao, val mRestApi: RestApi) : Ea
             )
     }
 
+    override fun apiFingPayICICIEasyPayTransaction(
+        request: FingPayICICIAepsTransactionRequest,
+        successHandler: (FingPayAepsTxnResponse) -> Unit,
+        failerHandler: (Throwable?) -> Unit
+    ) {
+        val request: Flowable<FingPayAepsTxnResponse> =
+            mRestApi.doApiFingPayAepsTransactions(
+                Utils.getRequest(
+                    EasyPaisaApp.getGson().toJson(
+                        request
+                    ))
+            )
+        request
+            .subscribeOn(newThread())
+            .observeOn(mainThread())
+            .subscribe(
+                {
+                    successHandler(it)
+                }, { error ->
+                    failerHandler(error)
+                }
+            )
+    }
+
     @SuppressLint("CheckResult")
     override fun apiFingPayICICITransaction(
         request: FingPayICICIAepsTransactionRequest,

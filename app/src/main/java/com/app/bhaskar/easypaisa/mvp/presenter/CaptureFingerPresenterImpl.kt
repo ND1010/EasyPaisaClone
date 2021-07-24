@@ -48,6 +48,25 @@ class CaptureFingerPresenterImpl(val view: CaptureFingerPresenter.CaptureFingerV
         }
     }
 
+    override fun apiCallforAepsIciciEasyPayTxn() {
+        if (Utils.isNetworkConnected(view.getViewActivity())) {
+            view.showProgress("Processing AePS transaction,Please wait...")
+            val request = view.doRetriveModel().getFingPayAepsRequest()
+            repository.apiFingPayICICITransaction(request, {
+                view.hideProgress()
+                view.doRetriveModel().getCaptureDomain().fingPayAepsTxnResponse = it
+                view.onFingpayAepsTxnDone()
+            }, {
+                view.hideProgress()
+                if (it?.message != null) {
+                    view.showError(it.message!!)
+                }
+            })
+        } else {
+            view.showError(view.getViewActivity().getString(R.string.no_internet_message))
+        }
+    }
+
     override fun apiCallforYesAeps() {
         if (Utils.isNetworkConnected(view.getViewActivity())) {
             view.showProgress("Processing AePS transaction,Please wait...")

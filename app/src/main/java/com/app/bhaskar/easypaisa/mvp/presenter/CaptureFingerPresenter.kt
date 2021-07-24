@@ -13,6 +13,7 @@ interface CaptureFingerPresenter : BasePresenter {
     fun doSendOtp()
     fun doVerifyOtp()
     fun proceedForEkycAuth()
+    fun apiCallforAepsIciciEasyPayTxn()
 
     interface CaptureFingerView : BaseView {
         fun doRetriveModel(): CaptureFingerModel

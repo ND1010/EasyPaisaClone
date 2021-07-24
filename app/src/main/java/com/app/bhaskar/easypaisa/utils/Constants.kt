@@ -94,6 +94,7 @@ object Constants {
             const val API_MICRO_ATM = "matm/initiate"
             const val API_MICRO_ATM_UPDATE = "matm/update"
             const val API_YES_BANK_AEPS = "faeps/yesbank/transaction"
+            const val API_EASYPAY_ICICI_BANK_AEPS = "faeps/easyicici/transaction"
             const val API_GET_OTP = "auth/register/otp"
             const val API_LOGOUT = "auth/logout"
             const val API_OKYC_DATA = "aadhardata/set"
