@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    tools:context=".ui.activity.MicroAtmIciciTxnReceipt">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMainTxnData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_4dp"
+        android:layout_marginEnd="@dimen/dim_4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_receipt_bg_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivTxnStatus"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_success_tnx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTxnStatus"
+                style="@style/TextViewStyleBlackBold20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Success"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivTxnStatus" />
+
+
+            <ImageView
+                android:id="@+id/ivAepsSerType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:src="@drawable/ic_microatm"
+                app:layout_constraintBottom_toBottomOf="@id/tvTxnMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTxnAmount" />
+
+            <TextView
+                android:id="@+id/tvTxnAmount"
+                style="@style/TextViewStyleBlueBold26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Rs.1000"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnStatus" />
+
+            <TextView
+                android:id="@+id/tvTxnMessage"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:text="Transaction successful"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnAmount" />
+
+
+            <TextView
+                android:id="@+id/tvLabelTransactionDetail"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:text="Micro ATM Transactions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnMessage" />
+
+            <ImageView
+                android:id="@+id/ivShareReceipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/ic_share_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivTxnStatus" />
+
+
+            <TextView
+                android:id="@+id/tvLabelTxnOrderId"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Order ID"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelTransactionDetail" />
+
+            <TextView
+                android:id="@+id/tvTxnOrderId"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnOrderId"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnOrderId" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnBalance"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Available Balance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnOrderId" />
+
+            <TextView
+                android:id="@+id/tvTxnBalance"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnBalance"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnBalance" />
+
+
+            <TextView
+                android:id="@+id/tvLabelTxnRRN"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Bank RRN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnBalance" />
+
+            <TextView
+                android:id="@+id/tvTxnRRN"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnRRN"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnRRN" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnBankName"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Bank Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnRRN" />
+
+            <TextView
+                android:id="@+id/tvTxnBankName"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnBankName"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnBankName" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnCardNo"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Card Number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnBankName" />
+
+            <TextView
+                android:id="@+id/tvTxnCardNo"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnCardNo"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnCardNo" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnCardType"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Card Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnCardNo" />
+
+            <TextView
+                android:id="@+id/tvTxnCardType"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnCardType"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnCardType" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnAgentName"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Agent Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnCardType" />
+
+            <TextView
+                android:id="@+id/tvTxnAgentName"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnAgentName"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnAgentName" />
+
+            <TextView
+                android:id="@+id/tvLabelTxnBeneDate"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_10dp"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnAgentName" />
+
+            <TextView
+                android:id="@+id/tvTxnBaneDate"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_10dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="2"
+                android:text="NA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnBeneDate"
+                app:layout_constraintTop_toTopOf="@id/tvLabelTxnBeneDate" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_30dp"
+                android:layout_marginTop="@dimen/text_16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvTxnBaneDate" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_logo_easy_tagline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

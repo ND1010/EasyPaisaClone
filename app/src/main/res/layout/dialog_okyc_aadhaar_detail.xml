@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dim_8dp"
+    android:layout_marginEnd="@dimen/dim_8dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/dim_16dp"
+    app:cardElevation="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutMicro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:layout_marginBottom="@dimen/dim_26dp"
+            android:padding="@dimen/dim_16dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Aadhaar Card Details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUserProfile"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:elevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidlineVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4" />
+
+            <TextView
+                android:id="@+id/tvLblName"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Aadhaar Name:"
+                app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivUserProfile" />
+
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:gravity="end"
+                android:text="Bhasker yadav"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                app:layout_constraintTop_toBottomOf="@id/ivUserProfile" />
+
+            <TextView
+                android:id="@+id/tvLblAadhaarNumber"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_12dp"
+                android:text="Aadhaar Number:"
+                app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <TextView
+                android:id="@+id/tvAadhaarNumber"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="5644565646465"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                app:layout_constraintTop_toTopOf="@id/tvLblAadhaarNumber" />
+
+
+            <TextView
+                android:id="@+id/tvLblGender"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_12dp"
+                android:text="Gender:"
+                app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAadhaarNumber" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Male"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                app:layout_constraintTop_toTopOf="@id/tvLblGender" />
+
+
+            <TextView
+                android:id="@+id/tvLblAddress"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_12dp"
+                android:text="Address:"
+                app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="456 - Gjjjf [sddsnkldn sdjdksdlskd slkdslkdksl sldkjdksjd sdlkjkdlsjds sldsldk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                app:layout_constraintTop_toTopOf="@id/tvLblAddress" />
+
+
+            <TextView
+                android:id="@+id/tvLblMobile"
+                style="@style/TextViewStyleGray14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_12dp"
+                android:text="Mobile No:"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                style="@style/TextViewStyleBlackBold14sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:visibility="gone"
+                android:text="9693135796"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                app:layout_constraintTop_toTopOf="@id/tvLblMobile" />
+
+            <TextView
+                android:id="@+id/tvUserNote"
+                style="@style/TextViewStyleOrangeBold16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Please check the Aadhaar detail with your Aadhaar card detail, Is all information are correct?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMobile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:background="@drawable/draw_bg_border_blue"
+                android:text="Yes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUserNote" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_16dp"
+                android:background="@drawable/draw_bg_border_blue"
+                android:text="No"
+                app:layout_constraintEnd_toStartOf="@id/btnYes"
+                app:layout_constraintTop_toBottomOf="@id/tvUserNote" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.cardview.widget.CardView>

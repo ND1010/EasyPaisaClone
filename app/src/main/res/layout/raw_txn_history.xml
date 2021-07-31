@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivHistory"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_aadhaar"
+        android:visibility="gone"
+        app:civ_circle_background_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayoutHistoryData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivHistory"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvHistoryTitle"
+            style="@style/TextViewStyleBlackBold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:text="History data bill payment aeps"
+            app:layout_constraintEnd_toStartOf="@id/tvHistoryAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHistoryOrderId"
+            style="@style/TextViewStyleGray14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="ASNI2929323SSD"
+            android:textSize="@dimen/text_dim_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHistoryTitle" />
+
+        <ImageView
+            android:id="@+id/ivIconMobile"
+            android:layout_width="@dimen/dim_18dp"
+            android:layout_height="@dimen/dim_18dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_mobile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHistoryOrderId">
+
+        </ImageView>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/grpMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivIconMobile,tvHistoryMobile" />
+
+        <TextView
+            android:id="@+id/tvHistoryMobile"
+            style="@style/TextViewStyleGray14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="232326666"
+            android:textSize="@dimen/text_dim_12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivIconMobile"
+            app:layout_constraintStart_toEndOf="@id/ivIconMobile"
+            app:layout_constraintTop_toTopOf="@id/ivIconMobile" />
+
+        <TextView
+            android:id="@+id/tvHistoryAmount"
+            style="@style/TextViewStyleGreenBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Rs 5000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvHistoryTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHistoryStatus"
+            style="@style/TextViewStyleGreenBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:includeFontPadding="false"
+            android:text="Success"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHistoryMobile" />
+
+        <TextView
+            android:id="@+id/tvHistoryDate"
+            style="@style/TextViewStyleBlack14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:includeFontPadding="false"
+            android:text="20/20/2020"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHistoryMobile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/ivView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGrayL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintlayoutHistoryData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:background="@color/epmoney_1568286816white"
+        tools:context=".ui.activity.SelectBankActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarBank"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/epmoney_1568286816_colorPrimary"
+                android:gravity="center_vertical"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/epmoney_1568286816white"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="Select bank">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/epmoney_1568286816white"
+                android:paddingBottom="@dimen/dim_8dp_epmoney_1568286816"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/bankdetails_edtsearchcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_10dp_epmoney_1568286816"
+                    android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+                    android:layout_marginEnd="@dimen/dim_10dp_epmoney_1568286816"
+                    android:background="@drawable/gray_bg_rounded_border"
+                    android:drawableEnd="@drawable/ic_search_gray_24dp"
+                    android:hint="@string/search_bank"
+                    android:maxLines="2"
+                    android:padding="@dimen/dim_8dp_epmoney_1568286816" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewSearchBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

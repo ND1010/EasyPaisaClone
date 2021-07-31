@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TextViewStyleBlackBold16sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="@dimen/dim_12dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivBoardImage"
+        android:layout_width="@dimen/dim_40dp"
+        android:layout_height="@dimen/dim_40dp" />
+
+    <TextView
+        android:id="@+id/tvSelectBoard"
+        style="@style/TextViewStyleBlackBold16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:orientation="vertical"
+        android:text="Gujarat" />
+</LinearLayout>

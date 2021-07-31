@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activity.RegisterRemitterActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/con">
+
+        <include
+            android:id="@+id/layoutToolbarBene"
+            layout="@layout/toolbar_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:hint="Enter Name"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/MyHintStyleBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbarBene">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBeneName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:hint="Beneficiary Name"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/MyHintStyleBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutName">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:hint="Bank Account Number"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/MyHintStyleBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutBeneName">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBankAccountCon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:hint="Confirm Bank Account Number"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/MyHintStyleBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutBankAccount">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBankIfsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:hint="Bank IFSC Code"
+            android:textColorHint="@color/colorBlack"
+            app:hintTextAppearance="@style/MyHintStyleBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutBankAccountCon">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:background="@drawable/drawable_button_blue_gredient"
+            android:fontFamily="@font/muli_bold"
+            android:text="Register Remitter"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_dim_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutBankIfsc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

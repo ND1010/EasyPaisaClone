@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ElectricityBillPaymentActivity">
+
+    <include
+        android:id="@+id/layoutToolbarElectricity"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarElectricity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_dim_16sp"
+            android:layout_marginEnd="@dimen/text_dim_16sp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectState"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/state"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSelectState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:focusable="false"
+                android:hint="@string/select_state"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectState" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvSelectElectricityBoard,edtSelectElectricityBoard,inputLayoutElectricityBoard" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSelectState" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectElectricityBoard"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:text="Electricity Board"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputLayoutState" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSelectElectricityBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:focusable="false"
+                android:hint="Select Electricity Board"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectElectricityBoard" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutElectricityBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSelectElectricityBoard" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCustomerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_6dp"
+                android:hint="Customer ID"
+                android:textColorHint="@color/colorBlack"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSelectElectricityBoard">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutExtraField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_6dp"
+                android:hint=""
+                android:textColorHint="@color/colorBlack"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutCustomerId">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtExtraField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_6dp"
+                android:hint="@string/enter_amount"
+                android:textColorHint="@color/colorBlack"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutExtraField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aepssearch_edtamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionId="3"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutBillDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:background="@drawable/draw_bg_border_blue"
+                android:padding="@dimen/dim_16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutEnterAmount">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidlineVer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <TextView
+                    android:id="@+id/tvCustomerNameLabel"
+                    style="@style/TextViewStyleGray14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/customer_name"
+                    app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    style="@style/TextViewStyleBlack14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:text="@string/customer_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCustomerBillDateLabel"
+                    style="@style/TextViewStyleGray14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_4dp"
+                    android:text="Bill Date"
+                    app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCustomerName" />
+
+
+                <TextView
+                    android:id="@+id/tvCustomerBillDate"
+                    style="@style/TextViewStyleBlack14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:text="10 june 2020"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                    app:layout_constraintTop_toTopOf="@id/tvCustomerBillDateLabel" />
+
+                <TextView
+                    android:id="@+id/tvCustomerDueDateLabel"
+                    style="@style/TextViewStyleGray14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_4dp"
+                    android:text="Due Date"
+                    app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCustomerBillDate" />
+
+
+                <TextView
+                    android:id="@+id/tvCustomerDueDate"
+                    style="@style/TextViewStyleBlack14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:text="23 june 2020"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                    app:layout_constraintTop_toTopOf="@id/tvCustomerDueDateLabel" />
+
+
+                <TextView
+                    android:id="@+id/tvCustomerBillAmountLabel"
+                    style="@style/TextViewStyleGray14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_4dp"
+                    android:text="Due Amount"
+                    app:layout_constraintEnd_toStartOf="@id/guidlineVer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCustomerDueDate" />
+
+
+                <TextView
+                    android:id="@+id/tvCustomerBillAcount"
+                    style="@style/TextViewStyleBlack14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:text="Rs. 5600"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidlineVer"
+                    app:layout_constraintTop_toTopOf="@id/tvCustomerBillAmountLabel" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupButtonProceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="btnProceedToPay,tvInfo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProceedToPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:background="@drawable/drawable_button_blue_gredient"
+                android:fontFamily="@font/muli_bold"
+                android:text="@string/proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_dim_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutBillDetail" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                style="@style/TextViewStyleGray12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:text="@string/the_payment_will_reflect_at_biller_s_end_after_2_3_working_days"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnProceedToPay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">45dp</dimen>
+
+
+    <dimen name="spacing_normal">14dp</dimen>
+    <dimen name="spacing_standard">8dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_jerry">2dp</dimen>
+    <dimen name="space_min">4dp</dimen>
+    <dimen name="space_avg">16dp</dimen>
+    <dimen name="space_big">32dp</dimen>
+
+    <dimen name="padding_min">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_avg">16dp</dimen>
+    <dimen name="padding_big">32dp</dimen>
+
+    <dimen name="margin_min">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_avg">16dp</dimen>
+    <dimen name="margin_big">32dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+
+    <dimen name="user_icon_width">36dp</dimen>
+    <dimen name="user_icon_height">36dp</dimen>
+
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <dimen name="section_padding">7dp</dimen>
+
+
+    <dimen name="material_keyline_quarter">4dp</dimen>
+    <dimen name="material_keyline_half">8dp</dimen>
+    <dimen name="material_keyline_huge">64dp</dimen>
+
+
+    <!-- font sizes -->
+    <dimen name="font_xlarge">22sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+
+
+    <!-- typical sizes of views -->
+
+
+    <dimen name="margin_control">4dp</dimen>
+
+    <dimen name="no_dp">0dp</dimen>
+    <dimen name="image_size">150dp</dimen>
+
+    <dimen name="dim_4dp">4dp</dimen>
+    <dimen name="dim_24dp">24dp</dimen>
+    <dimen name="dim_28dp">28dp</dimen>
+    <dimen name="dim_32dp">32dp</dimen>
+    <dimen name="text_dim_12sp">12sp</dimen>
+    <dimen name="text_dim_14sp">14sp</dimen>
+    <dimen name="dim_8dp">8dp</dimen>
+    <dimen name="dim_16dp">16dp</dimen>
+    <dimen name="dim_40dp">40dp</dimen>
+    <dimen name="text_dim_18sp">18sp</dimen>
+    <dimen name="text_dim_22sp">22sp</dimen>
+    <dimen name="dim_10dp">10dp</dimen>
+    <dimen name="dim_26dp">26dp</dimen>
+    <dimen name="dim_15dp">15dp</dimen>
+    <dimen name="dim_2dp">2dp</dimen>
+    <dimen name="text_dim_16sp">16sp</dimen>
+    <dimen name="dim_12dp">12sp</dimen>
+    <dimen name="dim_18dp">18dp</dimen>
+    <dimen name="text_dim_8sp">8sp</dimen>
+    <dimen name="dim_20dp">20dp</dimen>
+    <dimen name="text_dim_56sp">56dp</dimen>
+    <dimen name="dim_38dp">38dp</dimen>
+    <dimen name="dim_48dp">48dp</dimen>
+    <dimen name="text_dim_20sp">20sp</dimen>
+    <dimen name="dim_0dp">0dp</dimen>
+    <dimen name="text_8sp">8sp</dimen>
+    <dimen name="dim_30dp">30dp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="dim_6dp">6dp</dimen>
+    <dimen name="dim_34dp">34dp</dimen>
+    <dimen name="dim_36dp">36dp</dimen>
+    <dimen name="text_dim_26sp">26sp</dimen>
+    <dimen name="dim_56dp">56dp</dimen>
+    <dimen name="dim_35dp">35dp</dimen>
+    <dimen name="dim_50dp">50dp</dimen>
+    <dimen name="dim_42dp">42dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    <dimen name="bottom_sheet_top_padding">8dp</dimen>
+
+</resources>

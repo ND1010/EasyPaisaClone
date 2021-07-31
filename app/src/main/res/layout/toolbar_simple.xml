@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/registrationToolBar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/ToolBarStyle">
+
+    <ImageView
+        android:id="@+id/ivHomeBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="@dimen/dim_4dp"
+        android:src="@drawable/ic_arrow_back_white" />
+
+    <TextView
+        android:id="@+id/tvToolbarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginEnd="@dimen/dim_26dp"
+        android:fontFamily="@font/muli_bold"
+        android:gravity="center_horizontal"
+        android:text="Registraion"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_16sp" />
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.easypay.epmoney.epmoneylib"
+    android:versionCode="10"
+    android:versionName="1.0.7.2" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.easypay.epmoney.epmoneylib.application.PaisaNikalApp"
+        android:theme="@style/PaisaNikalAppTheme"
+        tools:ignore="GoogleAppIndexingWarning,LockedOrientationActivity"
+        tools:replace="android:name" >
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.MicroTransactionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.TransactionDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.TermsAndConditionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.SelectBankActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.FingerprintScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.QRCodeScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.AepsTransactionActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialTheme.NoActionBar.NoStatusBar" />
+        <activity
+            android:name="com.easypay.epmoney.epmoneylib.ui.activity.IntermidiateActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/PaisaNikalAppTheme" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="com.finopaytech.finosdk.helpers.FinoFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" >
+            </meta-data>
+        </provider>
+    </application>
+
+</manifest>

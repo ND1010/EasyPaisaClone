@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item>
+        <bitmap android:src="@drawable/YOURIMAGE"/>
+    </item>-->
+    <item>
+        <shape>
+            <gradient android:angle="360"
+                      android:startColor="@color/epmoney_1568286816colorPrimaryTrans"
+                      android:centerColor="@color/epmoney_1568286816colorLightPrimaryTrans"
+                      android:endColor="@color/epmoney_1568286816colorLightPrimaryTrans"/>
+        </shape>
+    </item>
+</layer-list>

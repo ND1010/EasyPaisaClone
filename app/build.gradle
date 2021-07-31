@@ -1,0 +1,187 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    flavorDimensions "versionCode"
+    defaultConfig {
+        applicationId "com.app.bhaskar.easypaisa"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 13
+        versionName "1.2.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('D:\\Dhruv\\Projects\\AndroidEasyPaisaApp\\keystore_easypaisa.jks')
+            storePassword 'Easypaisa@#123'
+            keyPassword 'Easypaisa@#123'
+            keyAlias 'easypaisa'
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            buildConfigField "Boolean", "DEBUG_MODE", "false"
+            buildConfigField "String", "BASE_URL", HOST_URL
+            buildConfigField "String", "BASE_KARZA_URL", BASE_KARZA_URL
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", HOST_URL
+            buildConfigField "String", "BASE_KARZA_URL", BASE_KARZA_URL
+            buildConfigField "Boolean", "DEBUG_MODE", "true"
+        }
+    }
+
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def formattedDate = new Date().format('ddMMyy')
+            outputFileName = output.outputFile.name.replace(".apk", "easypaisa-${variant.versionName}-${formattedDate}.apk")
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.java_version
+        targetCompatibility rootProject.ext.java_version
+    }
+
+    kotlinOptions {
+        jvmTarget = "$rootProject.ext.java_version"
+    }
+
+    productFlavors {
+        easypaisa {
+            signingConfig signingConfigs.release
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':fingpaymicroatm')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':epmoneylib-paisanikal')
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.4.0-alpha01'
+
+    // for rxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.16"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    implementation "com.squareup.retrofit2:converter-moshi:2.6.2"
+
+    kapt 'com.google.dagger:dagger-compiler:2.5'
+    implementation 'com.google.dagger:dagger:2.5'
+
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-rxjava2:2.2.6'
+    kapt 'androidx.room:room-compiler:2.2.6'
+
+    implementation('com.github.bumptech.glide:glide:4.11.0') {
+        exclude group: "com.android.support"
+    }
+
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.3.61"
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    releaseApi files('libs/finosdk_live_1.0.6.2.aar')
+    debugApi files('libs/finosdk_live_1.0.6.2.aar')
+    implementation files('libs/okyc_WV_V0.3.6.aar')
+
+    implementation 'de.greenrobot:greendao:2.1.0'
+    implementation 'com.karumi:dexter:6.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.datatheorem.android.trustkit:trustkit:1.0.2'
+
+    implementation('ch.acra:acra:4.5.0') {
+        exclude group: 'org.json'
+    }
+    //File compressor
+    implementation 'id.zelory:compressor:2.1.0'
+
+    implementation 'com.airbnb.android:lottie:2.8.0'
+//    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.56'
+    implementation 'com.google.code.ksoap2-android:ksoap2-android:3.6.2'
+    //Fuselocation google
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //Okyc
+    /*implementation 'org.apache.santuario:xmlsec:2.0.10'
+    implementation 'com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0'
+    implementation 'com.madgag.spongycastle:bcpg-jdk15on:1.58.0.0'
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.11.3'
+    implementation group: 'net.lingala.zip4j', name: 'zip4j', version: '2.6.1'
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'*/
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    //Banner
+    implementation 'com.github.smarteist:autoimageslider:1.3.2-appcompat'
+    //Razorpay payment gateway
+    implementation 'com.razorpay:checkout:1.6.6'
+
+    implementation 'org.apache.httpcomponents:httpclient:4.5.6'
+    //Image Cropping
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+}

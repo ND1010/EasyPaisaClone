@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.DepositeCashActivity">
+
+    <include
+        android:id="@+id/layoutToolbarAeps"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarAeps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_16dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutAepsMobNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:hint="@string/enter_mobile_number"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutAccountNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:hint="Account Number"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutAepsMobNo">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtAccountNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSelectBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:drawableEnd="@drawable/ic_arrow_black_right"
+                android:focusable="false"
+                android:hint="@string/select_bank"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutAccountNo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:hint="@string/enter_amount"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtSelectBank">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aepssearch_edtamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionId="3"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/linearAmountShortCut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutEnterAmount">
+
+                <TextView
+                    android:id="@+id/tvAmount100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/border_primary_rounded"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="500"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_dim_12sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/tvAmount1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_4dp"
+                    android:background="@drawable/border_primary_rounded"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="1000"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_dim_12sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvAmount2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_4dp"
+                    android:background="@drawable/border_primary_rounded"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="2000"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_dim_12sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvAmount3000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_4dp"
+                    android:background="@drawable/border_primary_rounded"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="3000"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_dim_12sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:hint="Account holder name"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                android:focusable="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLoginOtp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtAcHolderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:enabled="false"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:hint="Enter OTP"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearAmountShortCut">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="linearLoginOtp,textInputLayoutOtp"
+                android:id="@+id/gpOTP">
+
+            </androidx.constraintlayout.widget.Group>
+
+            <LinearLayout
+                android:id="@+id/linearLoginOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:layout_marginBottom="@dimen/dim_26dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutOtp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOtpTimeRemainLbl"
+                    style="@style/TextViewStyleBlackBold14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_have_an_account">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOtpTimeRemain"
+                    style="@style/TextViewStyleBlueBold14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dim_4dp"
+                    android:text="@string/login_here"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvDontHavAccount">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGetOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:background="@drawable/drawable_button_blue_gredient"
+                android:fontFamily="@font/muli_bold"
+                android:text="@string/get_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_dim_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutHolderName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeposit"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:background="@drawable/drawable_button_blue_gredient"
+                android:fontFamily="@font/muli_bold"
+                android:text="@string/verify_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_dim_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutHolderName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    tools:context=".ui.fragment.AccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHomeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_rounded_primary"
+        android:paddingTop="@dimen/dim_12dp"
+        android:paddingBottom="@dimen/dim_12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvUserNameTool"
+            style="@style/TextViewStyleOrangeBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_4dp"
+            android:text="Demo data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvUserAgentCode"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASASW2323D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUserNameTool" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutHomeToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvLabelPersonal"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/personal_information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMainWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10dp"
+                app:cardElevation="@dimen/dim_2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelPersonal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim_16dp">
+
+                    <ImageView
+                        android:id="@+id/ivUserName"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_user"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserName" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserName"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="User Name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserName"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Demo1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserName"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserName" />
+
+                    <!--mobile-->
+
+                    <ImageView
+                        android:id="@+id/ivUserMobile"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_mobile_gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserMobile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserMobile" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserMobile"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="User Mobile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserName"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+                    <TextView
+                        android:id="@+id/tvUserMobile"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="+91 2565 556499"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserMobile"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserMobile" />
+
+                    <!--email-->
+
+                    <ImageView
+                        android:id="@+id/ivUserEmail"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_email"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserEmail"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserEmail" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserEmail"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserEmail"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserMobile" />
+
+                    <TextView
+                        android:id="@+id/tvUserEmail"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="abc@gmail.com"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserEmail"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserEmail" />
+
+                    <!--address-->
+
+                    <ImageView
+                        android:id="@+id/ivUserAddress"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_address"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserAddress"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserAddress" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserAddress"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Address"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserAddress"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserEmail" />
+
+                    <TextView
+                        android:id="@+id/tvUserAddress"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Address line one are here and adata should be pringted here  sdsd sdsdmjsdsdjdsjdsd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserAddress"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserAddress" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLabelKycDetail"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="@string/kyc_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardMainWallet" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCompleteYourKyc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10dp"
+                app:cardElevation="@dimen/dim_2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelKycDetail">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim_16dp">
+
+                    <TextView
+                        android:id="@+id/tvLblCompleteKyc"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Your KYC is pending, Complete your KYC to enjoy the services."
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnKyc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dim_32dp"
+                        android:layout_marginTop="@dimen/dim_8dp"
+                        android:background="@drawable/drawable_button_blue_gredient"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="Update now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_dim_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblCompleteKyc" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardKycDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10dp"
+                app:cardElevation="@dimen/dim_2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCompleteYourKyc">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim_16dp">
+
+                    <ImageView
+                        android:id="@+id/ivUserShop"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_shop"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserShop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserShop" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserShop"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Shop Name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserShop"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvUserShop"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="easy paisa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserShop"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserShop" />
+
+                    <!--mobile-->
+
+                    <ImageView
+                        android:id="@+id/ivUserPan"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_pan_gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserPan"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserPan" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserPan"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Pan Number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserPan"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserShop" />
+
+                    <TextView
+                        android:id="@+id/tvUserPan"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="2565 5564 9900"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserPan"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserPan" />
+
+                    <!--mobile-->
+                    <ImageView
+                        android:id="@+id/ivUserAadhar"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_aadhaar"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserAadhar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserAadhar" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserAadhar"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Aadhaar Number"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserAadhar"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserPan" />
+
+                    <TextView
+                        android:id="@+id/tvUserAadhar"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="2565 5564 9900"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserAadhar"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserAadhar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Help-->
+            <TextView
+                android:id="@+id/tvLabelNeedHelp"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Need Help"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardKycDetail" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNeedHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10dp"
+                app:cardElevation="@dimen/dim_2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelNeedHelp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim_16dp">
+
+                    <ImageView
+                        android:id="@+id/ivHelp"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_help"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblNeedHelp"
+                        app:layout_constraintBottom_toBottomOf="@id/btnContactUs"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLblNeedHelp"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:includeFontPadding="false"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:text="Facing problem in transactions,Sales,Customer support"
+                        app:layout_constraintStart_toEndOf="@id/ivHelp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnContactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_height="@dimen/dim_32dp"
+                        android:layout_marginTop="@dimen/dim_8dp"
+                        android:background="@drawable/drawable_button_blue_gredient"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="Contact Us"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_dim_12sp"
+                        app:layout_constraintStart_toEndOf="@id/ivHelp"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblNeedHelp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvLabelInfo"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNeedHelp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/dim_10dp"
+                app:cardElevation="@dimen/dim_2dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelInfo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dim_16dp">
+
+                    <ImageView
+                        android:id="@+id/ivUserPass"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_forgot"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserPass"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserPass" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserPass"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Reset Password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserPass"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvUserPass"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Change current password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserPass"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserPass" />
+
+                    <ImageView
+                        android:id="@+id/ivUserLogout"
+                        android:layout_width="@dimen/dim_26dp"
+                        android:layout_height="@dimen/dim_26dp"
+                        android:src="@drawable/ic_logout"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserLogout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvLblUserLogout" />
+
+                    <TextView
+                        android:id="@+id/tvLblUserLogout"
+                        style="@style/TextViewStyleGray14sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Logout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserLogout"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserPass" />
+
+                    <TextView
+                        android:id="@+id/tvUserLogout"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_16dp"
+                        android:layout_marginEnd="@dimen/dim_16dp"
+                        android:includeFontPadding="false"
+                        android:text="Logout form Easy Paisa"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivUserLogout"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblUserLogout" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--<include
+        android:layout_marginStart="@dimen/dim_8dp"
+        android:layout_marginEnd="@dimen/dim_8dp"
+        android:id="@+id/layoutMainAccount"
+        layout="@layout/layout_main_account"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutHomeToolbar" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

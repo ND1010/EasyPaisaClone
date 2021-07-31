@@ -1,0 +1,216 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <string-array name="devices">
+        <item>MANTRA</item>
+<!--        <item>MORPHO</item>-->
+        <item>TATVIK</item>
+        <item>STARTEK</item>
+    </string-array>
+
+    <style name="DatePicker" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/colorBlue</item>
+
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <!-- Optional, on Android 5+ you can modify the colorPrimaryDark color to match the windowBackground color for further branding-->
+        <!-- <item name="colorPrimaryDark">@android:color/white</item> -->
+    </style>
+
+    <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner.Underlined">
+        <item name="overlapAnchor">true</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:backgroundTint">@color/colorWhite</item>
+    </style>
+
+    <style name="Widget.App.SpinnerBlack" parent="@style/Widget.AppCompat.Spinner.Underlined">
+        <item name="overlapAnchor">true</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:backgroundTint">@color/colorBlack</item>
+    </style>
+
+    <!--Toolbar-->
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme_NoActionBarEasyPaisa">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">@null</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextViewStyleGreenSmallerBold" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleWhiteBold16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleGreenBold16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleOrangeBold16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorOrangeDark</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleOrangeBold14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorOrangeDark</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlueBold14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleWhitebold14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlueBold26sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_dim_26sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleWhiteBold26sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_dim_26sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlueBold16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlackBold16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlack14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleBlackBold14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlack12sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_12sp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleGray14sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">@dimen/text_dim_14sp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleGray12sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">@dimen/text_dim_12sp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleGray16sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">@dimen/text_dim_16sp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextViewStyleBlackBold20sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_20sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextViewStyleBlackBold18sp" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_dim_18sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="MyHintStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:colorAccent">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dim_16dp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="MyHintStyleBlack" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:colorAccent">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dim_16dp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+        <item name="android:tint">@color/colorBlack</item>
+    </style>
+
+    <style name="MyEditTextBlack" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorBlack</item>
+        <item name="android:tint">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/dim_18dp</item>
+        <item name="android:paddingTop">@dimen/dim_8dp</item>
+        <item name="android:paddingBottom">@dimen/dim_16dp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dim_18dp</item>
+        <item name="android:paddingTop">@dimen/dim_8dp</item>
+        <item name="android:paddingBottom">@dimen/dim_16dp</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <dimen name="text_dim_17sp">17sp</dimen>
+</resources>

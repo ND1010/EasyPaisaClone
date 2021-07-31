@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MicroTransactionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearMicroTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/epmoney_1568286816_colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_16dp_epmoney_1568286816"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMicroTransactionServiceType"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_ep_atm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvServiceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_semibold"
+            android:gravity="center"
+            android:text="ATM balance inquiry"
+            android:textColor="@color/epmoney_1568286816white"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="@dimen/dim_32dp_epmoney_1568286816"
+            android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+            android:layout_marginEnd="@dimen/dim_32dp_epmoney_1568286816"
+            android:background="@color/epmoney_1568286816white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMicroTransactionDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp_epmoney_1568286816">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <TextView
+                android:id="@+id/tvMobileLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+                android:fontFamily="@font/muli_semibold"
+                android:padding="@dimen/dim_4dp_epmoney_1568286816"
+                android:text="@string/mobile_no"
+                android:textColor="@color/epmoney_1568286816white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/guidline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMobileNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_8dp_epmoney_1568286816"
+                android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+                android:fontFamily="@font/muli"
+                android:padding="@dimen/dim_4dp_epmoney_1568286816"
+                android:text="9595952255"
+                android:textColor="@color/epmoney_1568286816white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/guidline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvAmountLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_semibold"
+                android:padding="@dimen/dim_4dp_epmoney_1568286816"
+                android:text="@string/amount"
+                android:textColor="@color/epmoney_1568286816white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/guidline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMobileNumber" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_8dp_epmoney_1568286816"
+                android:fontFamily="@font/muli"
+                android:padding="@dimen/dim_4dp_epmoney_1568286816"
+                android:text="$ 12345"
+                android:textColor="@color/epmoney_1568286816white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/guidline"
+                app:layout_constraintTop_toBottomOf="@id/tvMobileNumber" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivHomeBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_12dp_epmoney_1568286816"
+        android:src="@drawable/ic_left_arrow_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearAepsTermsCond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp_epmoney_1568286816"
+        android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+        android:layout_marginEnd="@dimen/dim_16dp_epmoney_1568286816"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearMicroTransaction">
+
+        <CheckBox
+            android:id="@+id/aeps_chktnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/epmoney_1568286816_colorPrimary"
+            android:checked="true"
+            android:text="@string/i_accept" />
+
+        <TextView
+            android:id="@+id/aeps_txttnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/terms_n_conditions"
+            android:textColor="@color/epmoney_1568286816_colorPrimary" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp_epmoney_1568286816"
+        android:layout_marginTop="@dimen/dim_32dp_epmoney_1568286816"
+        android:layout_marginEnd="@dimen/dim_16dp_epmoney_1568286816"
+        android:background="@drawable/draw_button_effect"
+        android:text="@string/proceed_for_balance_check"
+        android:textColor="@color/epmoney_1568286816white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearAepsTermsCond" />
+
+
+    <TextView
+        android:id="@+id/btnAppVersionCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:fontFamily="@font/muli_semibold"
+        android:padding="4dp"
+        android:text="Version 1.03.1"
+        android:textColor="@color/epmoney_1568286816black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

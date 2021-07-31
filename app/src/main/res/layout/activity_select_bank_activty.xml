@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SelectBankActivty">
+
+    <include
+        android:id="@+id/toolbarBank"
+        layout="@layout/toolbar_simple" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtBankSearch"
+        style="@style/TextViewStyleBlackBold20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:background="@drawable/draw_border_black_rounded"
+        android:drawableEnd="@drawable/ic_search_black_24dp"
+        android:hint="Search Bank"
+        android:layout_marginTop="@dimen/dim_16dp"
+        android:padding="@dimen/dim_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarBank" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dim_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtBankSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

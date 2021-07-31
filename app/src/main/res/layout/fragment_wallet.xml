@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.WalletFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHomeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_rounded_primary"
+        android:paddingStart="@dimen/dim_16dp"
+        android:paddingTop="@dimen/dim_12dp"
+        android:paddingBottom="@dimen/dim_12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@+id/ivLogoP"
+            android:layout_width="@dimen/dim_56dp"
+            android:layout_height="@dimen/dim_56dp"
+            android:padding="@dimen/dim_4dp"
+            android:src="@drawable/ic_p_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/linearwlcm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/ivLogoP"
+            app:layout_constraintStart_toEndOf="@id/ivLogoP"
+            app:layout_constraintTop_toTopOf="@id/ivLogoP">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabelWelcome"
+                style="@style/TextViewStyleWhitebold14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/wallets" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLabeleasyPaisa"
+                style="@style/TextViewStyleOrangeBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/easy_paisa" />
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gpMainBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivWalletBalance,linearMainWallet" />
+
+        <ProgressBar
+            android:id="@+id/progressBarMainBalance"
+            android:layout_width="@dimen/dim_35dp"
+            android:layout_height="@dimen/dim_35dp"
+            android:layout_marginEnd="@dimen/dim_20dp"
+            android:indeterminateTint="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearMainWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWalletMainBalance"
+                style="@style/TextViewStyleWhiteBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                tools:text="Rs.10,00,000" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWalletMainBalanceLabel"
+                style="@style/TextViewStyleOrangeBold14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/wallet_balance" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivWalletBalance"
+            android:layout_width="@dimen/dim_34dp"
+            android:layout_height="@dimen/dim_34dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:src="@drawable/ic_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/linearMainWallet"
+            app:layout_constraintEnd_toStartOf="@id/linearMainWallet"
+            app:layout_constraintTop_toTopOf="@id/linearMainWallet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/layoutMainWalletBal"
+        layout="@layout/layout_main_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutHomeToolbar" />
+
+    <ProgressBar
+        android:id="@+id/progressBarWalletBal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.bhaskar.easypaisa">
+
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK" />
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="image/jpeg" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+        <package android:name="com.mantra.rdservice" />
+        <package android:name="com.scl.rdservice" />
+        <package android:name="com.tatvik.bio.tmf20" />
+        <package android:name="com.acpl.registersdk" />
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".application.EasyPaisaApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_easypaisa"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round_easypaisa"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:overrideLibrary="com.fingpay.microatmsdk"
+        tools:replace="android:theme,android:allowBackup,android:name,android:icon,android:roundIcon">
+
+        <activity android:name=".ui.activity.OnlinePaymentReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.AddNewBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoadWalletUpiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DepositeCashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HelpDeskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="aepsapp.easypay.com.aepsandroid.camera.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AccountLegderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MiniStatementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MicroAtmIciciTxnReceipt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddNewBeneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ui.activity.DmtTransactionReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BeneficiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DmtTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegisterRemitterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MicroAtmIciciActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettlementRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoadWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.DthRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UtiRegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PancardUtiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ElectricityBillPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MobileRechargeReceipt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MobileRechargePlansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MobileRechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AePSTransactionReceiptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CaptureFingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SelectBankActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ElectricityBillPaymentReceiptActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <activity
+            android:name=".ui.activity.AgentKycRegistration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AepsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_NoActionBarEasyPaisa" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CaptureFingerActivity">
+
+    <include
+        android:id="@+id/layoutToolbarCaptureFinger"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintTxnDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_20dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:background="@drawable/draw_filled_bg_primary"
+        android:padding="@dimen/dim_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarCaptureFinger">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTxnType"
+            style="@style/TextViewStyleWhiteBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="AePS Transaction"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvAmount,tvLabelAmount,tvBankName,tvLabelBank,tvAadhaarNumber,tvLabelMobileNumber,tvMobileNumber,tvLabelAadhaarNumber" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelMobileNumber"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:text="Mobile Number:"
+            app:layout_constraintEnd_toStartOf="@id/guidlineV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTxnType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMobileNumber"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:text="123465000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toBottomOf="@id/tvTxnType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelAadhaarNumber"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:text="Aadhaar Number:"
+            app:layout_constraintEnd_toStartOf="@id/guidlineV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMobileNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAadhaarNumber"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:text="123454564564"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toTopOf="@id/tvLabelAadhaarNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelBank"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:text="Bank:"
+            app:layout_constraintEnd_toStartOf="@id/guidlineV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAadhaarNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBankName"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:text="Canara Bank"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toTopOf="@id/tvLabelBank" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelAmount"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:text="Amount:"
+            app:layout_constraintEnd_toStartOf="@id/guidlineV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBankName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAmount"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:text="10033"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toTopOf="@id/tvLabelAmount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/constraintTxnDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dim_26dp"
+        android:id="@+id/ivEkycFinger"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_fingerprint_auth" />
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerFingerDevice"
+        style="@style/Widget.App.SpinnerBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_26dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivEkycFinger" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_26dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:hint="@string/enter_otp"
+        android:textColorHint="@color/black"
+        android:visibility="gone"
+        app:hintTextAppearance="@style/MyHintStyleBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerFingerDevice">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:theme="@style/MyEditTextBlack" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLoginOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_16dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutOtp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOtpTimeRemainLbl"
+            style="@style/TextViewStyleBlack14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOtpTimeRemain"
+            style="@style/TextViewStyleBlueBold14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dim_4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvDontHavAccount">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOtpVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_26dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:background="@drawable/drawable_button_blue_gredient"
+        android:fontFamily="@font/muli_bold"
+        android:text="Verify OTP"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_dim_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLoginOtp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_26dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:background="@drawable/drawable_button_blue_gredient"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/scan_finger"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_dim_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLoginOtp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

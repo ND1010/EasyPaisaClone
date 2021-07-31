@@ -1,0 +1,485 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    tools:context=".ui.activity.AgentKycRegistration">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dim_16dp">
+
+        <TextView
+            android:id="@+id/tvKycNote"
+            style="@style/TextViewStyleBlueBold26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_30dp"
+            android:text="@string/complete_your_kyc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNote"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/after_successfully_kyc_completion_you_can_use_our_service"
+            app:layout_constraintStart_toStartOf="@id/tvKycNote"
+            app:layout_constraintTop_toBottomOf="@id/tvKycNote" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectUesrPhoto"
+            style="@style/TextViewStyleWhiteBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:includeFontPadding="false"
+            android:text="Capture Live Selfie Photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+        <LinearLayout
+            android:id="@+id/selectUserPhoto"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:background="@drawable/draw_round_circle_white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectUesrPhoto">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivUserFrontPic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:layout_constraintTop_toTopOf="@id/selectUserPhoto"
+            app:layout_constraintEnd_toEndOf="@id/selectUserPhoto"
+            app:layout_constraintBottom_toBottomOf="@id/selectUserPhoto"
+            app:layout_constraintStart_toStartOf="@id/selectUserPhoto"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:padding="@dimen/dim_4dp"
+            android:src="@drawable/image_selfie_photo"
+            android:id="@+id/ivUserImage" />
+
+        <TextView
+            android:id="@+id/tvSelfieImageNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="Capture Selfie photo with holding your Aadhaar Card."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            android:textColor="@color/colorYellow"
+            app:layout_constraintTop_toBottomOf="@id/selectUserPhoto" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:hint="@string/full_name"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSelfieImageNote">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegMobileNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:hint="@string/mobile_number"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegFullName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegAadhaarNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:hint="@string/aadhaar_number"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegMobileNo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegPanCardNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:hint="@string/pan_number"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegAadhaarNo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserPanName"
+            style="@style/TextViewStyleWhitebold14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:maxLines="1"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegPanCardNo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:hint="@string/city"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUserPanName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerState"
+            style="@style/Widget.App.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegCity" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:hint="Address"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerState">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:imeOptions="actionNext"
+                android:lines="3"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutRegPinCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_4dp"
+            android:hint="@string/pin_code"
+            android:textColorHint="@color/colorWhite"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegAddress">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:theme="@style/MyEditText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelPanSelect"
+            style="@style/TextViewStyleWhiteBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:text="@string/pan_card_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutRegPinCode" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSelectPanCard"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:background="@drawable/draw_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelPanSelect">
+
+            <ImageView
+                android:id="@+id/ivPanCardSelected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dim_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearSelectPanCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/ivPanCardSelected"
+                app:layout_constraintEnd_toEndOf="@id/ivPanCardSelected"
+                app:layout_constraintStart_toStartOf="@id/ivPanCardSelected"
+                app:layout_constraintTop_toTopOf="@id/ivPanCardSelected">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPanCardIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_id_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectPanCard"
+                    style="@style/TextViewStyleWhitebold14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/select_pan_card" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelAadhaarSelect"
+            style="@style/TextViewStyleWhiteBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_32dp"
+            android:text="@string/aadhaar_card_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutSelectPanCard" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSelectAadhaarCard"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:background="@drawable/draw_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelAadhaarSelect">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAadhaarCardSelected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dim_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearSelectAadhaarCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/ivAadhaarCardSelected"
+                app:layout_constraintEnd_toEndOf="@id/ivAadhaarCardSelected"
+                app:layout_constraintStart_toStartOf="@id/ivAadhaarCardSelected"
+                app:layout_constraintTop_toTopOf="@id/ivAadhaarCardSelected">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAadhaarCardIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_id_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectAadhaarCard"
+                    style="@style/TextViewStyleWhitebold14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/select_aadhaar_card" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelAadhaarSelectBack"
+            style="@style/TextViewStyleWhiteBold16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:text="@string/aadhaar_card_back_side_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutSelectAadhaarCard" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSelectAadhaarCardBack"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="@dimen/dim_8dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:background="@drawable/draw_border_white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelAadhaarSelectBack">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAadhaarCardSelectedBback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dim_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearSelectAadhaarCardBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/ivAadhaarCardSelectedBback"
+                app:layout_constraintEnd_toEndOf="@id/ivAadhaarCardSelectedBback"
+                app:layout_constraintStart_toStartOf="@id/ivAadhaarCardSelectedBback"
+                app:layout_constraintTop_toTopOf="@id/ivAadhaarCardSelectedBback">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAadhaarCardIconBack"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_id_card" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectAadhaarCardBack"
+                    style="@style/TextViewStyleWhitebold14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/select_aadhaar_card_back" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnProceedKyc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:background="@drawable/drawable_button_blue_gredient"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/proceed_for_kyc"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_dim_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutSelectAadhaarCardBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

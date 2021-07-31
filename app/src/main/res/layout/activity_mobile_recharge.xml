@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MobileRechargeActivity">
+
+    <include
+        android:id="@+id/layoutToolbarMobile"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollviewRecharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarMobile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutRecharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutRechargeMobNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:hint="@string/enter_mobile_number"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputEdtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSelectOperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:drawableEnd="@drawable/ic_arrow_black_right"
+                android:focusable="false"
+                android:hint="@string/select_operator"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutRechargeMobNo" />-->
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSelectElectricityBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:focusable="false"
+                android:hint="Select Mobile Operator"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:textStyle="bold"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutRechargeMobNo" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:hint="@string/enter_amount"
+                android:textColorHint="@color/colorBlack"
+                app:hintTextAppearance="@style/MyHintStyleBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtSelectElectricityBoard">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aepssearch_edtamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:imeActionId="3"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/colorBlack"
+                    android:theme="@style/MyEditTextBlack" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvBrowsPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dim_8dp"
+                android:alpha="0.5"
+                android:clickable="true"
+                android:padding="@dimen/dim_4dp"
+                android:text="@string/brows_plans"
+                android:textColor="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="@id/textInputLayoutEnterAmount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textInputLayoutEnterAmount" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMobileRecharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:background="@drawable/drawable_button_blue_gredient"
+                android:fontFamily="@font/muli_bold"
+                android:text="Proceed to Pay"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_dim_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutEnterAmount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

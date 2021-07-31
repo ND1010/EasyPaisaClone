@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.activity.DthRechargeActivity">
+
+    <include
+        android:id="@+id/layoutToolbarDTH"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarDTH">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_dim_16sp"
+            android:layout_marginEnd="@dimen/text_dim_16sp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectOperator"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Select operator to proceed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSelectOperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+                android:focusable="false"
+                android:hint="Select operator to proceed"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectOperator" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectCustomerId"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:text="Customer Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtSelectOperator" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEnterCustomerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer Id/Mobile Number"
+                android:imeActionId="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="16"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSelectCustomerId" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutCustomerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtEnterCustomerId" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCustomerAmount"
+                style="@style/TextViewStyleBlackBold16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:text="Amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputLayoutCustomerId" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEnterCustomerAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Amount"
+                android:imeActionId="2"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColorHint="@color/colorBlack"
+                android:theme="@style/MyEditTextBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCustomerAmount" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayoutCustomerAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtEnterCustomerAmount" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/gpDthEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvSelectCustomerId,edtEnterCustomerAmount,edtEnterCustomerId,inputLayoutCustomerAmount,inputLayoutCustomerId,btnProceedToPay,tvCustomerAmount" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProceedToPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_26dp"
+                android:alpha="0.5"
+                android:background="@drawable/drawable_button_blue_gredient"
+                android:enabled="false"
+                android:fontFamily="@font/muli_bold"
+                android:text="@string/proceed"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_dim_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/inputLayoutCustomerAmount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=
+        </item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK
+        </item>
+    </string-array>
+    <string-array name="devices">
+        <item>MANTRA</item>
+        <item>MORPHO</item>
+        <item>TATVIK</item>
+        <item>STARTEK</item>
+    </string-array>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/muli</item>
+        <item>@font/muli_semibold</item>
+    </array>
+    <color name="colorPrimary">#005F98</color>
+    <color name="epmoney_1568286816_colorPrimary">#005F98</color>
+    <color name="epmoney_1568286816black">#000</color>
+    <color name="epmoney_1568286816colorAccent">#2F3F48</color>
+    <color name="epmoney_1568286816colorGray">#929497</color>
+    <color name="epmoney_1568286816colorIndeterminate">#ff9900</color>
+    <color name="epmoney_1568286816colorIndeterminateInner">#CCDFEA</color>
+    <color name="epmoney_1568286816colorLightPrimary">#327EAC</color>
+    <color name="epmoney_1568286816colorLightPrimaryTrans">#90327EAC</color>
+    <color name="epmoney_1568286816colorPrimaryDark">#005F98</color>
+    <color name="epmoney_1568286816colorPrimaryTrans">#90005F98</color>
+    <color name="epmoney_1568286816colorTrans">#05FFFFFF</color>
+    <color name="epmoney_1568286816gray_dark">#FA868585</color>
+    <color name="epmoney_1568286816gray_light_2">#E8EBEF</color>
+    <color name="epmoney_1568286816group_button_dialog_pressed_holo_dark">#46c5c1ff</color>
+    <color name="epmoney_1568286816white">#FFFFFF</color>
+    <dimen name="dim_10dp_epmoney_1568286816">10dp</dimen>
+    <dimen name="dim_12dp_epmoney_1568286816">12dp</dimen>
+    <dimen name="dim_14dp_epmoney_1568286816">14dp</dimen>
+    <dimen name="dim_16dp_epmoney_1568286816">16dp</dimen>
+    <dimen name="dim_20dp_epmoney_1568286816">20dp</dimen>
+    <dimen name="dim_24dp_epmoney_1568286816">24dp</dimen>
+    <dimen name="dim_26dp_epmoney_1568286816">26dp</dimen>
+    <dimen name="dim_2dp_epmoney_1568286816">2dp</dimen>
+    <dimen name="dim_30dp_epmoney_1568286816">30dp</dimen>
+    <dimen name="dim_32dp_epmoney_1568286816">32dp</dimen>
+    <dimen name="dim_34dp_epmoney_1568286816">34dp</dimen>
+    <dimen name="dim_4dp_epmoney_1568286816">4dp</dimen>
+    <dimen name="dim_50dp_epmoney_1568286816">50dp</dimen>
+    <dimen name="dim_8dp_epmoney_1568286816">8dp</dimen>
+    <string name="aadhar_no">Aadhar No:</string>
+    <string name="agree_tnc">Please agree terms and conditions before proceeding</string>
+    <string name="amount">Amount</string>
+    <string name="app_name">epmoneylib</string>
+    <string name="atm_withdrawal_successful">ATM withdrawal successful</string>
+    <string name="balance_fetched_success">Balance fetched successfully</string>
+    <string name="balance_info">Balance info</string>
+    <string name="bank_name">Bank name:</string>
+    <string name="cancel">Cancel</string>
+    <string name="certificate_error">Certificate Error</string>
+    <string name="data_mismatch">Unauthorised Response</string>
+    <string name="done">Done</string>
+    <string name="enter_aadhar">Aadhar Number*</string>
+    <string name="enter_amount">Amount*</string>
+    <string name="enter_min_amount">Please enter minimum 100 rupees to max 10000 rupees</string>
+    <string name="enter_mobile">Mobile number*</string>
+    <string name="error_occured">Some Error Occurred</string>
+    <string name="fail">Fail</string>
+    <string name="fino_aeps_withdrawal_successful">Fino AEPS withdrawal successful</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_accept">I accept</string>
+    <string name="mini_statement">Mini Statement</string>
+    <string name="mobile_no">Mobile No:</string>
+    <string name="mobile_no_start_from">Mobile No should not be start from 0,1,2,3,4</string>
+    <string name="no">No</string>
+    <string name="no_internet_connection">No internet connection.Please check your internet connection.</string>
+    <string name="ok">Ok</string>
+    <string name="please_enter_aadhar_number">Please enter aadhar number</string>
+    <string name="please_enter_amount">Please enter amount</string>
+    <string name="please_enter_mobile_number">Please enter mobile number</string>
+    <string name="please_enter_valide_aadhar_number">Please enter valide aadhar number</string>
+    <string name="please_enter_valide_mobile_number">Please enter valide mobile number</string>
+    <string name="please_provice_camera_permission_qr_code">Please provide camera permission to read QR code</string>
+    <string name="please_select_bank">Please select bank</string>
+    <string name="proceed">Proceed</string>
+    <string name="proceed_for_balance_check">Proceed for balance check</string>
+    <string name="proceed_for_withdrawal">Proceed for withdrawal</string>
+    <string name="required_environment_not_found">Required environment not found, please do pass environment PRODUCTION or SNAD_BOX</string>
+    <string name="required_param_not_found_pas_all_param_properly">Required parameters not found, please pass all parameters properly</string>
+    <string name="retry">Retry</string>
+    <string name="scan_finger">Scan finger</string>
+    <string name="scanner_device">Scanner device</string>
+    <string name="search_bank">Search bank</string>
+    <string name="select_bank">Select bank*</string>
+    <string name="select_scanner_device">Select scanner device</string>
+    <string name="something_wants_worng">Something wants wrong, please try after some time</string>
+    <string name="success">Success</string>
+    <string name="terms_condition">Terms &amp; Condition</string>
+    <string name="terms_n_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="transaction_has_canceled_by_user">Transaction has been canceled by user.</string>
+    <string name="transaction_receipt">Transaction Receipt</string>
+    <string name="unable_capture">Unable to capture Fingerprint</string>
+    <string name="withdrwal">Withdraw</string>
+    <string name="yes">Yes</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="colorPrimary">@color/epmoney_1568286816_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/epmoney_1568286816colorPrimaryDark</item>
+        <item name="colorAccent">@color/epmoney_1568286816colorAccent</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="MaterialTheme.NoActionBar.NoStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/epmoney_1568286816_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/epmoney_1568286816colorPrimaryDark</item>
+        <item name="colorAccent">@color/epmoney_1568286816colorAccent</item>
+    </style>
+    <style name="PaisaNikalAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="colorPrimary">@color/epmoney_1568286816_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/epmoney_1568286816colorPrimaryDark</item>
+        <item name="colorAccent">@color/epmoney_1568286816colorAccent</item>
+    </style>
+    <style name="button_borderless_style" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/epmoney_1568286816_colorPrimary</item>
+    </style>
+</resources>

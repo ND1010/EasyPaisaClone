@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BeneficiaryActivity">
+
+    <include
+        android:id="@+id/layoutToolbarDmt"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLblMyBane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dim_16dp"
+        android:text="My beneficiary"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_dim_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarDmt" />
+
+    <TextView
+        android:id="@+id/tvAddBene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:drawableStart="@drawable/ic_draw_add_user"
+        android:drawablePadding="@dimen/dim_16dp"
+        android:padding="@dimen/dim_16dp"
+        android:text="Add"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_dim_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLblMyBane" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewBene"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLblMyBane" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linear_add_new_bene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLblMyBane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/ivAddBene"
+            android:src="@drawable/ic_add_new_user"
+            android:layout_width="@dimen/dim_56dp"
+            android:layout_height="@dimen/dim_56dp"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:id="@+id/tvLblAddBene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Beneficiary"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbarDmt" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

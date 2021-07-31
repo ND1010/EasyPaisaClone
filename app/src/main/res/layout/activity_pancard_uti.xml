@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.activity.PancardUtiActivity">
+
+    <include
+        android:id="@+id/layoutToolbarUti"
+        layout="@layout/toolbar_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToolbarUti">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintProgress"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tvProgressMessage"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProgressMessage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Fetching data..."
+                    style="@style/TextViewStyleGray16sp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/costraintLayoutMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/linearHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_20dp"
+                    android:layout_marginTop="@dimen/dim_16dp"
+                    android:layout_marginEnd="@dimen/dim_20dp"
+                    android:background="@drawable/draw_bg_border_blue"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim_12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/tvLblDeviceDetail"
+                        style="@style/TextViewStyleGray16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Uti Details"
+                        android:textAllCaps="true" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivStatusUti"
+                    android:layout_width="@dimen/dim_32dp"
+                    android:layout_height="@dimen/dim_32dp"
+                    android:layout_marginStart="@dimen/dim_40dp"
+                    android:src="@drawable/ic_pending_txn"
+                    app:layout_constraintBottom_toBottomOf="@id/linearHeader"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearHeader" />
+
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_40dp"
+                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@id/linearHeader"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearHeader" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_20dp"
+                    android:layout_marginEnd="@dimen/dim_20dp"
+                    android:background="@drawable/draw_bg_border_blue"
+                    android:padding="@dimen/dim_12dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearHeader">
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidLineDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.4" />
+
+                    <TextView
+                        android:id="@+id/tvLbluserName"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_name"
+                        app:layout_constraintEnd_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        style="@style/TextViewStyleGray16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_8dp"
+                        android:text="@string/user_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvLblPass"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_8dp"
+                        android:text="@string/password"
+                        app:layout_constraintEnd_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+                    <TextView
+                        android:id="@+id/tvPass"
+                        style="@style/TextViewStyleGray16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_8dp"
+                        android:text="ASNSAKN4334"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintTop_toTopOf="@id/tvLblPass" />
+
+                    <TextView
+                        android:id="@+id/tvLblPriceToken"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_8dp"
+                        android:text="Price Rs/Token"
+                        app:layout_constraintEnd_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvPass" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:text="NA"
+                        style="@style/TextViewStyleBlackBold16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLblPriceToken" />
+
+                    <TextView
+                        android:id="@+id/tvPriceToken"
+                        style="@style/TextViewStyleGray16sp"
+                        android:layout_width="@dimen/dim_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim_8dp"
+                        android:text="1200"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/guidLineDetails"
+                        app:layout_constraintTop_toTopOf="@id/tvLblPriceToken" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUtiToken"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_16dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:hint="@string/no_of_tokens_to_buy"
+                    android:textColorHint="@color/colorBlack"
+                    app:hintTextAppearance="@style/MyHintStyleBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constraint">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBlack"
+                        android:theme="@style/MyEditTextBlack" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUtiAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:hint="Amount"
+                    android:textColorHint="@color/colorBlack"
+                    app:hintTextAppearance="@style/MyHintStyleBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayoutUtiToken">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBlack"
+                        android:theme="@style/MyEditTextBlack" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUtiVleId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:hint="VLE ID"
+                    android:textColorHint="@color/colorBlack"
+                    app:hintTextAppearance="@style/MyHintStyleBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayoutUtiAmount">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@color/colorBlack"
+                        android:theme="@style/MyEditTextBlack" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:hint="Address"
+                    android:visibility="gone"
+                    android:textColorHint="@color/colorBlack"
+                    app:hintTextAppearance="@style/MyHintStyleBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayoutUtiVleId">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:lines="2"
+                        android:gravity="start|top"
+                        android:textColor="@color/colorBlack"
+                        android:theme="@style/MyEditTextBlack" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Payment option-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearPaymentOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_20dp"
+                    android:layout_marginTop="@dimen/dim_16dp"
+                    android:layout_marginEnd="@dimen/dim_20dp"
+                    android:background="@drawable/draw_bg_border_blue"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim_12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textInputLayoutAddress">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select Payment Method"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        />
+
+                    <RadioGroup
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/radioGroupPayment">
+
+                        <RadioButton
+                            android:layout_gravity="start|center"
+                            android:padding="8dp"
+                            android:visibility="gone"
+                            android:text="Main Wallet"
+                            android:buttonTint="@color/colorBlue"
+                            android:id="@+id/rbtnMainWallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <RadioButton
+                            android:checked="true"
+                            android:layout_gravity="start|center"
+                            android:padding="8dp"
+                            android:text="Online-UPI"
+                            android:buttonTint="@color/colorBlue"
+                            android:id="@+id/rbtnOnline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnProceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_26dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:background="@drawable/drawable_button_blue_gredient"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="@string/proceed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_dim_18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearPaymentOption" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvResetTokenId"
+                    style="@style/TextViewStyleBlueBold16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="@dimen/dim_4dp"
+                    android:layout_marginEnd="@dimen/dim_16dp"
+                    android:text="@string/forgot_password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnProceed">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

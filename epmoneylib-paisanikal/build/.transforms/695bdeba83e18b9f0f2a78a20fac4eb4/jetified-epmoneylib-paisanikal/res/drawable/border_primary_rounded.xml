@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/dim_26dp_epmoney_1568286816" />
+    <stroke android:color="@color/epmoney_1568286816_colorPrimary" android:width="@dimen/dim_2dp_epmoney_1568286816" />
+    <solid android:color="@color/epmoney_1568286816white" />
+
+</shape>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/epmoney_1568286816white"
+    android:fillViewport="true"
+    android:padding="@dimen/dim_12dp_epmoney_1568286816"
+    tools:context=".ui.fragment.AepsBalanceFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutAepsTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextAepsMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/edtAepsMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
+                android:hint="@string/enter_mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aepssearch_edtbank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+            android:drawableEnd="@drawable/ic_arrow_gray_right"
+            android:focusable="false"
+            android:fontFamily="@font/muli"
+            android:hint="@string/select_bank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTextAepsMobileNumber" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAepsAadharMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+            android:hint="@string/enter_aadhar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aepssearch_edtbank">
+
+            <EditText
+                android:id="@+id/edtAepsAadharNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_qr_code"
+                android:fontFamily="@font/muli"
+                android:inputType="number"
+                android:maxLength="12" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearAepsTermsCond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp_epmoney_1568286816"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/inputAepsAadharMobile">
+
+            <CheckBox
+                android:id="@+id/aeps_chktnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/epmoney_1568286816_colorPrimary"
+                android:checked="true"
+                android:text="@string/i_accept" />
+
+            <TextView
+                android:id="@+id/aeps_txttnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/terms_n_conditions"
+                android:textColor="@color/epmoney_1568286816_colorPrimary" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAepsProceedBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp_epmoney_1568286816"
+            android:background="@drawable/draw_button_effect"
+            android:text="@string/proceed"
+            android:textColor="@color/epmoney_1568286816white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearAepsTermsCond" />
+
+        <TextView
+            android:id="@+id/btnAppVersionCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:fontFamily="@font/muli_semibold"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/epmoney_1568286816black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,3 @@
+include ':app', ':fingpaymicroatm'
+include ':app', ':epmoneylib-paisanikal'
+rootProject.name='EasyPaisaApp'

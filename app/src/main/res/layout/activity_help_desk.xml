@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".ui.activity.HelpDeskActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linearHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:padding="@dimen/dim_16dp"
+                android:layout_marginStart="@dimen/dim_36dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:layout_marginEnd="@dimen/dim_36dp"
+                android:src="@drawable/ic_helpdesk" />
+
+            <ImageView
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_help" />
+
+            <TextView
+                android:id="@+id/tvHelpTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/muli_bold"
+                android:padding="@dimen/dim_16dp"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:text="Timing - 10 AM to 7 PM"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_dim_18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLblCallUsOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_bold"
+            android:padding="@dimen/dim_16dp"
+            android:text="Customer Support"
+            android:textColor="@color/colorOrangeDark"
+            android:textSize="@dimen/text_dim_22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearHelp" />
+
+        <TextView
+            android:id="@+id/tvLblSales1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="Sales : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dim_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLblCallUsOn" />
+
+        <TextView
+            android:id="@+id/tvSales1Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_26dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="8210422933"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toBottomOf="@id/tvLblCallUsOn" />
+
+        <TextView
+            android:id="@+id/callSales1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:fontFamily="@font/muli_bold"
+            android:padding="@dimen/dim_2dp"
+            android:text="Call"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSales1Call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSales1Call" />
+
+        <TextView
+            android:id="@+id/callSales2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:fontFamily="@font/muli_bold"
+            android:padding="@dimen/dim_2dp"
+            android:text="Call"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSales2Call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSales2Call" />
+
+        <TextView
+            android:id="@+id/callSales3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:fontFamily="@font/muli_bold"
+            android:padding="@dimen/dim_2dp"
+            android:text="Call"
+            android:visibility="gone"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSales3Call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSales3Call" />
+
+        <TextView
+            android:id="@+id/callSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:fontFamily="@font/muli_bold"
+            android:padding="@dimen/dim_2dp"
+            android:text="Call"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSupport"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSupport" />
+
+        <TextView
+            android:id="@+id/tvSales2Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_26dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="8102926200"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toBottomOf="@id/tvSales1Call" />
+
+        <TextView
+            android:id="@+id/tvSales3Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_26dp"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:visibility="gone"
+            android:fontFamily="@font/muli_bold"
+            android:text="+91 8102926201"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toBottomOf="@id/tvSales2Call" />
+
+        <TextView
+            android:id="@+id/tvLblSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="Support : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_dim_18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSales3Call" />
+
+        <TextView
+            android:id="@+id/tvSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_26dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="8102926202"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toEndOf="@id/guidlineV"
+            app:layout_constraintTop_toTopOf="@id/tvLblSupport" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+
+        <TextView
+            android:id="@+id/tvEmailSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:drawableStart="@drawable/ic_gmail"
+            android:drawablePadding="@dimen/dim_16dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="info@easypaisa.in"
+            android:textSize="@dimen/text_dim_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLblSupport" />
+
+        <TextView
+            android:padding="@dimen/dim_8dp"
+            android:id="@+id/copyrights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_26dp"
+            android:fontFamily="@font/muli_bold"
+            android:text="@string/copyright_2021_easypaisa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

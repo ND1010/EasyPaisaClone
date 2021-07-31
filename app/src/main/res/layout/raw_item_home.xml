@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dim_16dp"
+    android:paddingStart="@dimen/dim_8dp"
+    android:paddingEnd="@dimen/dim_8dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCategoryName"
+        style="@style/TextViewStyleBlackBold16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Banking service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewHomeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategoryName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/epmoney_1568286816white"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/ivBankPhoto"
+        android:src="@drawable/ic_account_balance_black_24dp"
+        android:layout_width="@dimen/dim_50dp_epmoney_1568286816"
+        android:padding="@dimen/dim_4dp_epmoney_1568286816"
+        android:layout_height="@dimen/dim_50dp_epmoney_1568286816"
+         />
+
+    <TextView
+        android:id="@+id/tvBankName"
+        app:layout_constraintStart_toEndOf="@id/ivBankPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivBankPhoto"
+        app:layout_constraintBottom_toBottomOf="@id/ivBankPhoto"
+        android:padding="@dimen/dim_4dp_epmoney_1568286816"
+        android:fontFamily="@font/muli_semibold"
+        android:textColor="@color/epmoney_1568286816black"
+        android:text="Andhra pradesh garmeena vikash bank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

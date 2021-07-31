@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/dim_16dp"
+    android:paddingTop="@dimen/dim_16dp"
+    android:paddingEnd="@dimen/dim_16dp">
+
+    <ImageView
+        android:layout_width="@dimen/dim_32dp"
+        android:layout_height="@dimen/dim_32dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvLedgerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/dim_8dp"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@id/tvLedgerAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Airtel mobile recharge" />
+
+    <TextView
+        android:id="@+id/tvLedgerAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1600 Rs"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/text_dim_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLedgerName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLedgerTxnText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="SUBSCRIPTION FEES:: for date Thu Oct 03 19:32:13 IST 2019"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/tvLedgerAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLedgerName" />
+
+
+    <TextView
+        android:id="@+id/tvLedgerReferenceNumber"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:textSize="@dimen/text_dim_12sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_2dp"
+        android:includeFontPadding="false"
+        android:text="NA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLedgerTxnText" />
+
+    <TextView
+        android:id="@+id/tvLedgerDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:includeFontPadding="false"
+        android:text="Date"
+        android:layout_marginTop="@dimen/dim_4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLedgerReferenceNumber" />
+
+    <TextView
+        android:id="@+id/tvLedgerDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:includeFontPadding="false"
+        android:text="NA"
+        android:layout_marginTop="@dimen/dim_4dp"
+        android:layout_marginStart="@dimen/dim_8dp"
+        app:layout_constraintStart_toEndOf="@id/tvLedgerDateLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvLedgerReferenceNumber" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/dim_10dp"
+        android:background="@color/colorGray"
+        app:layout_constraintTop_toBottomOf="@id/tvLedgerDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

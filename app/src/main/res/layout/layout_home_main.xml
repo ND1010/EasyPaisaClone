@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dim_26dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/sliderViewBanners"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:sliderAnimationDuration="800"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="800"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="4dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="2dp"
+                app:sliderIndicatorRadius="1dp"
+                app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                app:sliderIndicatorUnselectedColor="@color/colorLightGray"
+                app:sliderScrollTimeInSec="15"
+                app:sliderStartAutoCycle="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewSlider">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_8dp">
+
+                <LinearLayout
+                    android:id="@+id/linearNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/draw_border_black_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ivNotice"
+                        android:layout_width="@dimen/dim_42dp"
+                        android:layout_height="@dimen/dim_42dp"
+                        android:padding="@dimen/dim_4dp"
+                        android:src="@drawable/ic_email_notice" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNotice"
+                            style="@style/TextViewStyleBlueBold16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_16dp"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:includeFontPadding="false"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="nsjksandkjdsnjksdns asdklsjadk asdlkmsadd poasdsadsa sadposd ssad psadp sd sad asd spdd o sdksdsad sads sadsadds "
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tvNoticeBoard"
+                            style="@style/TextViewStyleGray14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_16dp"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="1" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewNotice" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNeedHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_26dp"
+            android:layout_marginBottom="@dimen/dim_26dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dim_10dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerviewHome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_16dp">
+
+                <ImageView
+                    android:id="@+id/ivHelp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_help"
+                    app:layout_constraintBottom_toBottomOf="@id/btnContactUs"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvLblNeedHelp" />
+
+                <TextView
+                    android:id="@+id/tvLblNeedHelp"
+                    style="@style/TextViewStyleGray14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:includeFontPadding="false"
+                    android:text="Facing problem in transactions,Sales,Customer support"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivHelp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnContactUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim_32dp"
+                    android:layout_marginStart="@dimen/dim_16dp"
+                    android:layout_marginTop="@dimen/dim_8dp"
+                    android:background="@drawable/drawable_button_blue_gredient"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="Contact Us"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_dim_12sp"
+                    app:layout_constraintStart_toEndOf="@id/ivHelp"
+                    app:layout_constraintTop_toBottomOf="@id/tvLblNeedHelp" />
+
+                <LinearLayout
+                    android:id="@+id/linearWhatsApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/draw_border_black_rounded"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnContactUs">
+
+                    <ImageView
+                        android:id="@+id/ivWhatsapp"
+                        android:layout_width="@dimen/dim_42dp"
+                        android:layout_height="@dimen/dim_42dp"
+                        android:padding="@dimen/dim_4dp"
+                        android:src="@drawable/ic_whatsapp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextViewStyleBlueBold14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_16dp"
+                            android:includeFontPadding="false"
+                            android:text="WhatsApp Support." />
+
+                        <TextView
+                            android:id="@+id/tvNeedHelp"
+                            style="@style/TextViewStyleGray14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_16dp"
+                            android:includeFontPadding="false"
+                            android:text="Click here to chat with our support team." />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

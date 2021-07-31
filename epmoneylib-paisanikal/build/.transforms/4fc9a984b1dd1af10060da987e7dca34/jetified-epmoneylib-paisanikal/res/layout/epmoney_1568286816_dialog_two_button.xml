@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:background="@android:color/transparent"
+        app:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+            android:paddingTop="@dimen/dim_8dp_epmoney_1568286816"
+            android:paddingBottom="@dimen/dim_8dp_epmoney_1568286816"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:visibility="gone"
+                android:text="Error"
+                android:fontFamily="@font/muli_semibold"
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+
+        />
+
+        <TextView
+                android:text="asdlnksladnsasdaklnkld"
+                android:id="@+id/tvMessage"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp">
+            <Button
+                    android:id="@+id/tvCancel"
+                    style="@style/button_borderless_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:fontFamily="@font/muli_semibold"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/epmoney_1568286816_colorPrimary"
+            />
+
+            <Button
+                    android:visibility="gone"
+                    android:fontFamily="@font/muli_semibold"
+                    android:id="@+id/tvOk"
+                    style="@style/button_borderless_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/epmoney_1568286816_colorPrimary"
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

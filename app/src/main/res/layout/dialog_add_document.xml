@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_Title_PhotoSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/choose_selection_type"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_Gallery_PhotoSelection"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="7dp"
+        android:src="@drawable/ic_selection_gallery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Title_PhotoSelection" />
+
+    <TextView
+        android:id="@+id/tv_Gallery_PhotoSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muli"
+        android:gravity="center"
+        android:text="Gallery"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/iv_Gallery_PhotoSelection"
+        app:layout_constraintStart_toStartOf="@id/iv_Gallery_PhotoSelection"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Gallery_PhotoSelection" />
+
+    <ImageView
+        android:id="@+id/iv_Camera_PhotoSelection"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:padding="7dp"
+        android:src="@drawable/ic_selection_camera"
+        app:layout_constraintStart_toEndOf="@+id/iv_Gallery_PhotoSelection"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Title_PhotoSelection" />
+
+    <TextView
+        android:id="@+id/tv_Camera_PhotoSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muli"
+        android:gravity="center"
+        android:text="Camera"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/iv_Camera_PhotoSelection"
+        app:layout_constraintStart_toStartOf="@id/iv_Camera_PhotoSelection"
+        app:layout_constraintTop_toBottomOf="@+id/iv_Camera_PhotoSelection" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
