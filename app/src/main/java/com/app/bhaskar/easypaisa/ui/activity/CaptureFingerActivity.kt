@@ -396,6 +396,7 @@ class CaptureFingerActivity : BaseActivity(), CaptureFingerPresenter.CaptureFing
             request.latitude = EasyPaisaApp.getUserLatLng()?.latitude.toString()
             request.longitude = EasyPaisaApp.getUserLatLng()?.longitude.toString()
             request.ip = ipAddress
+            request.name = aepsRequest?.name!!
             request.transactionAmount = aepsRequest?.amount!!
             request.biodata = bioDeviceresult!!
             request.transactionType =
@@ -420,12 +421,16 @@ class CaptureFingerActivity : BaseActivity(), CaptureFingerPresenter.CaptureFing
             request.bankId = aepsRequest?.bank!!.iinno
             request.device = deviceSelectedServer
 
-            if (request.transactionType == "MS") {
-                presenter.apiCallforAepsFinpayTxnMiniSt()
-            } else if(request.transactionType == "CD"){
-                presenter.apiCallforAepsFinpayTxn()
-            }else{
-                presenter.apiCallforAepsIciciEasyPayTxn()
+            when (request.transactionType) {
+                "MS" -> {
+                    presenter.apiCallforAepsFinpayTxnMiniSt()
+                }
+                "CD" -> {
+                    presenter.apiCallforAepsFinpayTxn()
+                }
+                else -> {
+                    presenter.apiCallforAepsIciciEasyPayTxn()
+                }
             }
         } else if (aepsRequest?.aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS) {
             val request = doRetriveModel().getFingPayAepsRequest()

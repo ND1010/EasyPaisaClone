@@ -139,7 +139,6 @@ class AepsActivity : BaseActivity(), AepsPresenter.AepsView {
                                 transactionFor = getString(R.string.ser_balance)
                                 updateAepsTnx()
                             }
-
                         }
                     } else {
                         when (tab!!.position) {
@@ -396,11 +395,12 @@ class AepsActivity : BaseActivity(), AepsPresenter.AepsView {
                 textInputLayoutAepsMobNo.isErrorEnabled = false
             }
 
-            if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS) {
+            if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS
+                ||aepsServiceFor == Constants.AvailableService.SERVICE_ICICI_AEPS) {
                 if (textInputLayoutAepsUserName.visibility == View.VISIBLE
                     && textInputLayoutAepsUserName.editText!!.text.toString().trim().isEmpty()
                 ) {
-                    textInputLayoutAepsUserName.error = "Please enter your name"
+                    textInputLayoutAepsUserName.error = "Please enter user name"
                     return false
                 } else {
                     textInputLayoutAepsUserName.isErrorEnabled = false
@@ -598,7 +598,8 @@ class AepsActivity : BaseActivity(), AepsPresenter.AepsView {
             }
 
             override fun onTextChanged(char: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS) {
+                if (aepsServiceFor == Constants.AvailableService.SERVICE_EASYPAY_AEPS ||
+                    aepsServiceFor == Constants.AvailableService.SERVICE_ICICI_AEPS) {
                     if (char!!.isEmpty()) {
                         return
                     }

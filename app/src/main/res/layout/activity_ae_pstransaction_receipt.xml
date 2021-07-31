@@ -167,7 +167,7 @@
                 android:layout_marginTop="@dimen/dim_4dp"
                 android:text="RRN Number"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLabelAgentID" />
+                app:layout_constraintTop_toBottomOf="@id/tvTxnBankName" />
 
 
             <TextView
@@ -209,12 +209,14 @@
             <TextView
                 android:id="@+id/tvTxnBankName"
                 style="@style/TextViewStyleBlackBold16sp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="end"
                 android:layout_marginStart="@dimen/dim_10dp"
                 android:layout_marginTop="@dimen/dim_4dp"
                 android:layout_marginEnd="@dimen/dim_10dp"
                 android:text="State bank of india"
+                app:layout_constraintStart_toEndOf="@id/tvLabelTxnBankName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTxnAadhaarNo" />
 
@@ -237,11 +239,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_10dp"
-                android:layout_marginTop="@dimen/dim_4dp"
                 android:layout_marginEnd="@dimen/dim_10dp"
                 android:text="4454654566"
+                app:layout_constraintTop_toTopOf="@id/tvLabelRRNNo"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTxnAgentId" />
+                 />
 
 
             <View
