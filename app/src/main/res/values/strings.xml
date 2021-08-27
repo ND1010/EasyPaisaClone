@@ -48,7 +48,6 @@
     <string name="update">Update</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="withdraw">Withdraw</string>
     <string name="balance_info">Balance Info</string>
     <string name="enter_mobile_number">Enter Mobile Number</string>
@@ -89,7 +88,6 @@
     <string name="success">Success</string>
     <string name="pending">Pending</string>
     <string name="failed">Failed</string>
-    <string name="select_operator">Select Operator</string>
     <string name="select">Select</string>
     <string name="talktime">Talktime:</string>
     <string name="validity">Validity</string>
@@ -98,7 +96,7 @@
     <string name="some_thing_wants_wong">Some thing wants wrong, Please try after some time.</string>
     <string name="select_state">Select State</string>
     <string name="state">State</string>
-    <string name="the_payment_will_reflect_at_biller_s_end_after_2_3_working_days">The payment will reflect at biller\'s end after 2-3 working days.</string>
+    <string name="the_payment_will_reflect_at_biller_s_end_after_2_3_working_days">The payment will reflect at biller\'s end after 2–3 working days.</string>
     <string name="customer_name">Customer Name</string>
     <string name="states">States</string>
     <string name="fetch_bill">Fetch Bill</string>
@@ -132,7 +130,6 @@
     <string name="bank_name">Bank Name</string>
     <string name="transfer_money">Transfer Money</string>
     <string name="are_you_sure_wants_to_close_mini_statement">Are you sure you wants to close mini statement</string>
-    <string name="balance_inquiry">Balance inquiry</string>
     <string name="lpg_gas">Lpg Gas</string>
     <string name="piped_gas">Piped Gas</string>
     <string name="water">Water</string>
@@ -149,9 +146,6 @@
     <string name="time_remain_to_verifiy">Time left to verify OTP: </string>
     <string name="resend_otp">Reset OTP</string>
     <string name="don_t_receive_otp">Don\'t receive OTP?</string>
-    <string name="please_enter_pan_card_number">Please enter PAN card number</string>
-    <string name="please_enter_valid_PAN_number">Please enter valid PAN card number</string>
-    <string name="load_wallet_by_upi">Load wallet by UPI</string>
     <string name="verify_otp">Verify Otp</string>
     <string name="deposit_cash">Deposit Cash</string>
     <string name="account_number">Account Number</string>

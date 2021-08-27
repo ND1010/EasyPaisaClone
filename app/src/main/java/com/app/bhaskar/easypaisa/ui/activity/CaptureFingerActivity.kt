@@ -243,7 +243,6 @@ class CaptureFingerActivity : BaseActivity(), CaptureFingerPresenter.CaptureFing
             showToast(getString(R.string.some_thing_wants_wong))
             finish()
         }
-
         val itemsArrayAdapter =
             ArrayAdapter<String>(
                 this@CaptureFingerActivity,

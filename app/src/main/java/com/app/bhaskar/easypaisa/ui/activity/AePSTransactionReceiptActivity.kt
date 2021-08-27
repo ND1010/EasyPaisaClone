@@ -219,7 +219,7 @@ class AePSTransactionReceiptActivity : BaseActivity(),
         }
 
         if (aepsRequest?.transactionFor == getString(R.string.ser_balance)) {
-            if (!aepsTxnResponse?.amount.isNullOrEmpty()) {
+            if (!aepsTxnResponse?.balance.isNullOrEmpty()) {
                 tvTxnAmount.text = Utils.formatAmount(
                     String.format(
                         Locale.ENGLISH,

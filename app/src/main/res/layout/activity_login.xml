@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,10 +15,11 @@
         android:padding="@dimen/dim_16dp">
 
         <ImageView
+            android:id="@+id/ivLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_easy_logo"
-            app:layout_constraintBottom_toTopOf="@id/constraintLayoutLoginEnterFields"
+            android:layout_marginTop="@dimen/dim_36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,11 +29,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_36dp"
             android:layout_marginEnd="@dimen/dim_16dp"
             android:layout_marginBottom="@dimen/dim_30dp"
-            app:layout_constraintBottom_toTopOf="@id/btnLogin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo">
 
             <TextView
                 android:id="@+id/tvLabelLoginNow"
@@ -70,17 +71,17 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayoutLoginPassword"
-                app:passwordToggleEnabled="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dim_8dp"
                 android:hint="@string/password"
                 android:textColorHint="@color/colorWhite"
-                app:passwordToggleTint="@color/white"
                 app:hintTextAppearance="@style/MyHintStyle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textInputLayoutLoginMobile">
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutLoginMobile"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
@@ -116,14 +117,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dim_16dp"
             android:layout_marginEnd="@dimen/dim_16dp"
-            android:layout_marginBottom="@dimen/dim_16dp"
+            android:layout_marginTop="@dimen/dim_16dp"
             android:background="@drawable/drawable_button_blue_gredient"
             android:fontFamily="@font/muli_bold"
             android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/text_dim_18sp"
-            app:layout_constraintBottom_toTopOf="@id/linearLoginSignup">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutLoginEnterFields">
 
         </androidx.appcompat.widget.AppCompatButton>
 
@@ -131,10 +134,11 @@
             android:id="@+id/linearLoginSignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dim_8dp"
             android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dim_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.appcompat.widget.AppCompatTextView

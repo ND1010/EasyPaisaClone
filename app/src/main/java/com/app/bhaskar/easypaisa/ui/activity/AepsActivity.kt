@@ -815,7 +815,7 @@ class AepsActivity : BaseActivity(), AepsPresenter.AepsView {
     override fun onUserValidate() {
         val res = doRetriveModel().getLoginDomain().yesValidateUserResponse
         isCustFound = res.status
-        when (res.status) {
+        when (isCustFound) {
             Constants.ApiResponse.RES_CNF -> {
                 textInputLayoutAepsUserName.visibility = View.VISIBLE
                 textInputLayoutAepsUserName.editText!!.isEnabled = true

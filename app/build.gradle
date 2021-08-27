@@ -14,8 +14,8 @@ android {
         applicationId "com.app.bhaskar.easypaisa"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 14
-        versionName "1.2.1"
+        versionCode 15
+        versionName "1.2.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -64,6 +64,40 @@ android {
 
     packagingOptions {
         exclude 'AndroidManifest.xml'
+        exclude 'res/mipmap-anydpi-v26/ic_launcher_round.xml'
+        exclude 'res/mipmap-xxxhdpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-ldpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-mdpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-hdpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-xxhdpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-anydpi-v26/ic_launcher.xml'
+        exclude 'res/mipmap-mdpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-ldpi-v4/ic_launcher.png'
+        exclude 'res/mipmap-xhdpi-v4/ic_launcher.png'
+
+        exclude 'res/mipmap-hdpi-v4/ic_launcher_round.png'
+        exclude 'res/mipmap-anydpi-v4/ic_launcher_round.png'
+        exclude 'res/mipmap-mdpi-v4/ic_launcher_round.png'
+        exclude 'res/mipmap-xxhdpi-v4/ic_launcher_round.png'
+        exclude 'res/mipmap-xxxhdpi-v4/ic_launcher_round.png'
+        exclude 'res/mipmap-xhdpi-v4/ic_launcher_round.png'
+        exclude 'res/values/values.xml'
+        exclude 'res/layout/activity_main.xml'
+
+        exclude 'res/drawable-anydpi-v21/ic_launcher_background.xml'
+        exclude 'res/drawable-hdpi-v4/ic_launcher_background.png'
+        exclude 'res/drawable-xhdpi-v4/ic_launcher_background.png'
+        exclude 'res/drawable-mdpi-v4/ic_launcher_background.png'
+        exclude 'res/drawable-ldpi-v4/ic_launcher_background.png'
+        exclude 'res/drawable-xxxhdpi-v4/ic_launcher_background.png'
+        exclude 'res/drawable-xxhdpi-v4/ic_launcher_background.png'
+        exclude 'res/mipmap-xxxhdpi-v4/ic_launcher_round.png'
+
+        exclude 'res/drawable-v24/ic_launcher_foreground.xml'
+    }
+
+    configurations {
+        compile.exclude group: 'com.google.android'
     }
 
     android.applicationVariants.all { variant ->

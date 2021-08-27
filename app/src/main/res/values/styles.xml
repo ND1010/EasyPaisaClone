@@ -10,13 +10,6 @@
         <item name="windowActionBar">false</item>
     </style>
 
-    <string-array name="devices">
-        <item>MANTRA</item>
-<!--        <item>MORPHO</item>-->
-        <item>TATVIK</item>
-        <item>STARTEK</item>
-    </string-array>
-
     <style name="DatePicker" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorAccent">@color/colorBlue</item>
@@ -102,12 +95,6 @@
     </style>
 
     <style name="TextViewStyleBlueBold26sp" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">@dimen/text_dim_26sp</item>
-        <item name="android:fontFamily">@font/muli_bold</item>
-    </style>
-
-    <style name="TextViewStyleWhiteBold26sp" parent="android:Widget.TextView">
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/text_dim_26sp</item>
         <item name="android:fontFamily">@font/muli_bold</item>
@@ -212,5 +199,4 @@
         <item name="android:fontFamily">@font/muli</item>
     </style>
 
-    <dimen name="text_dim_17sp">17sp</dimen>
 </resources>

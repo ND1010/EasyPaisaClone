@@ -396,7 +396,8 @@ class HomeFragment : BaseFragment(), HomeFragmentPresenter.HomeView {
             return
         }
 
-        if (userData?.agent?.everify == "pending") {
+        //Fixme Removed eKyc verofication as no needed 12/0821
+        /*if (userData?.agent?.everify == "pending") {
             Utils.showAlert(
                 getViewActivity(),
                 "eKYC verification are needed in order to access the services",
@@ -408,7 +409,7 @@ class HomeFragment : BaseFragment(), HomeFragmentPresenter.HomeView {
                 }, View.OnClickListener {
                 })
             return
-        }
+        }*/
     }
 
     override fun initiateAtmTransaction(type: Int) {

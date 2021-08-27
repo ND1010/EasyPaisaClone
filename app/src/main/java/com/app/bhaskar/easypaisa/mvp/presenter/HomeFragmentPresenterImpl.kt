@@ -244,7 +244,8 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
         val intent = Intent(view.getViewActivity(), AepsActivity::class.java)
         when (it.serviceId) {
             Constants.AvailableService.SERVICE_EASYPAY_AEPS -> {
-                if (view.getUserData()?.agent!=null &&
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent!=null &&
                     view.getUserData()?.yesagent?.status != "approved") {
                     Utils.showAlert(
                         view.getViewActivity(),
@@ -257,12 +258,13 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_EASYPAY_AEPS)
                 view.getViewActivity().startActivity(intent)
             }
             Constants.AvailableService.SERVICE_AEPS_ICICI_EP -> {
-                if (view.getUserData()?.agent?.everify == "pending") {
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
                         "eKYC verification are needed in order to access the services",
@@ -274,7 +276,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_AEPS_ICICI_EP)
                 view.getViewActivity().startActivity(intent)
             }
@@ -284,7 +286,8 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
             }
             Constants.AvailableService.SERVICE_ICICI_AEPS -> {
                 //FingPay AePS transactions
-                if (view.getUserData()?.agent?.everify == "pending") {
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
                         "eKYC verification are needed in order to access the services",
@@ -296,17 +299,15 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_ICICI_AEPS)
                 view.getViewActivity().startActivity(intent)
             }
             Constants.AvailableService.SERVICE_MICRO_ATM -> {
-                /*intent.putExtra("selectedService", Constants.AvailableService.SERVICE_MICRO_ATM)
-                view.getViewActivity().startActivity(intent)*/
                 if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
-                        "eKYC verification are needed in order to access the services",
+                        "eKYC verification are needed in order to access Micro ATM services",
                         "Proceed",
                         "Cancel",
                         View.OnClickListener {
@@ -327,7 +328,8 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
             }
 
             Constants.AvailableService.SERVICE_AADHARPAY -> {
-                if (view.getUserData()?.agent?.everify == "pending") {
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
                         "eKYC verification are needed in order to access the services",
@@ -339,7 +341,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_EASYPAY_AEPS)
                 intent.putExtra(
                     "transactionFor",
@@ -349,7 +351,8 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
             }
 
             Constants.AvailableService.SERVICE_MINI_STATEMENT -> {
-                if (view.getUserData()?.agent?.everify == "pending") {
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
                         "eKYC verification are needed in order to access the services",
@@ -361,7 +364,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_EASYPAY_AEPS)
                 intent.putExtra(
                     "transactionFor",
@@ -370,7 +373,8 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                 view.getViewActivity().startActivity(intent)
             }
             Constants.AvailableService.SERVICE_DEPOSITE -> {
-                if (view.getUserData()?.agent?.everify == "pending") {
+                //Fixme Removed eKyc verofication as no needed 12/0821
+                /*if (view.getUserData()?.agent?.everify == "pending") {
                     Utils.showAlert(
                         view.getViewActivity(),
                         "eKYC verification are needed in order to access the services",
@@ -382,7 +386,7 @@ class HomeFragmentPresenterImpl(val view: HomeFragmentPresenter.HomeView) : Home
                         },View.OnClickListener {
                         })
                     return
-                }
+                }*/
                 val intent = Intent(view.getViewActivity(),DepositeCashActivity::class.java)
                 intent.putExtra("selectedService", Constants.AvailableService.SERVICE_ICICI_AEPS)
                 intent.putExtra(
